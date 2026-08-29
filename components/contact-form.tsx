@@ -8,9 +8,6 @@ import { Textarea } from "@/components/ui/textarea";
 
 type FormStatus = "idle" | "sending" | "success" | "error";
 
-const CONTACT_ENDPOINT =
-  "https://formsubmit.co/ajax/David.Schunk@comcast.net";
-
 export function ContactForm() {
   const [status, setStatus] = useState<FormStatus>("idle");
 
@@ -19,7 +16,7 @@ export function ContactForm() {
     const form = event.currentTarget;
     const data = new FormData(form);
 
-    if (String(data.get("_honey") ?? "").trim()) {
+    if (String(data.get("website") ?? "").trim()) {
       form.reset();
       setStatus("success");
       return;
@@ -27,25 +24,23 @@ export function ContactForm() {
 
     setStatus("sending");
 
-    const subject = String(data.get("subject") ?? "Website message");
-    const payload = Object.fromEntries(data.entries());
-    payload._subject = `davidschunk.com contact — ${subject}`;
-    payload._template = "table";
-    payload._captcha = "false";
-    payload._url = window.location.href;
-
     try {
-      const response = await fetch(CONTACT_ENDPOINT, {
+      const response = await fetch("/api/contact", {
         method: "POST",
         headers: {
           Accept: "application/json",
           "Content-Type": "application/json",
         },
-        body: JSON.stringify(payload),
+        body: JSON.stringify({
+          name: data.get("name"),
+          email: data.get("email"),
+          subject: data.get("subject"),
+          message: data.get("message"),
+          website: data.get("website"),
+        }),
       });
-      const result = (await response.json()) as { success?: boolean | string };
 
-      if (!response.ok || result.success === false || result.success === "false") {
+      if (!response.ok) {
         throw new Error("Message delivery failed");
       }
 
@@ -59,79 +54,87 @@ export function ContactForm() {
   return (
     <form className="contact-form" onSubmit={handleSubmit}>
       <div className="form-header">
-        <span>NEW TRANSMISSION</span>
-        <span>TO: DAVID SCHUNK</span>
+        <div>
+          <span>Send a message</span>
+          <p>Your note is delivered privately.</p>
+        </div>
+        <span className="form-availability"><i /> Available</span>
       </div>
 
       <div className="form-grid">
         <label className="form-field">
-          <span>01 / YOUR NAME</span>
+          <span>Your name</span>
           <Input
             className="contact-input"
             name="name"
             autoComplete="name"
             placeholder="What should I call you?"
+            minLength={2}
+            maxLength={100}
             required
           />
         </label>
 
         <label className="form-field">
-          <span>02 / REPLY EMAIL</span>
+          <span>Reply email</span>
           <Input
             className="contact-input"
             type="email"
             name="email"
             autoComplete="email"
             placeholder="you@example.com"
+            maxLength={200}
             required
           />
         </label>
 
         <label className="form-field form-field-wide">
-          <span>03 / SUBJECT</span>
+          <span>Subject</span>
           <Input
             className="contact-input"
             name="subject"
             placeholder="What are we talking about?"
+            minLength={2}
+            maxLength={160}
             required
           />
         </label>
 
         <label className="form-field form-field-wide">
-          <span>04 / MESSAGE</span>
+          <span>Message</span>
           <Textarea
             className="contact-textarea"
             name="message"
             placeholder="Give me the useful details."
-            rows={7}
+            rows={6}
+            minLength={10}
+            maxLength={5000}
             required
           />
         </label>
 
-        <Input
-          className="honey-field"
-          name="_honey"
-          tabIndex={-1}
-          autoComplete="off"
-          aria-hidden="true"
-        />
+        <label className="honey-field" aria-hidden="true">
+          Leave this field empty
+          <Input name="website" tabIndex={-1} autoComplete="off" />
+        </label>
       </div>
 
       <div className="form-footer">
-        <div className="form-status" aria-live="polite">
-          {status === "idle" && "SECURE ROUTE / REPLY DIRECTLY FROM EMAIL"}
-          {status === "sending" && "TRANSMITTING MESSAGE…"}
-          {status === "success" && "TRANSMISSION RECEIVED. I’LL BE IN TOUCH."}
+        <p className={`form-status form-status-${status}`} aria-live="polite">
+          {status === "idle" && "I read every message myself."}
+          {status === "sending" && "Sending your message…"}
+          {status === "success" && "Thanks—your message is on its way."}
           {status === "error" && (
-            <span>
-              DELIVERY FAILED — EMAIL ME AT{" "}
-              <a href="mailto:David.Schunk@comcast.net">DAVID.SCHUNK@COMCAST.NET</a>
-            </span>
+            <>
+              That didn&apos;t go through. Try me on{" "}
+              <a href="https://discord.gg/3phxzXBsAA" target="_blank" rel="noreferrer">Discord</a>.
+            </>
           )}
-        </div>
+        </p>
 
         <Button className="transmit-button" type="submit" disabled={status === "sending"}>
-          {status === "sending" ? "SENDING…" : "TRANSMIT MESSAGE →"}
+          {status === "sending" ? "Sending…" : "Send message"}
+          <span aria-hidden="true">→</span>
         </Button>
       </div>
     </form>
