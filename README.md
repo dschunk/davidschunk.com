@@ -5,8 +5,9 @@ personal home on the web.
 
 This site brings together infrastructure engineering, open-source tools,
 writing, adoption advocacy, gaming, and the story behind the work. The design
-uses a field-operations-meets-editorial visual system: deep navy, warm paper,
-signal red, precise technical details, and direct language.
+is a deliberately unconventional personal field manual: hard editorial type,
+utility markings, route lines, stamped details, safety orange, electric blue,
+and direct language.
 
 ## What is here
 
@@ -15,6 +16,7 @@ signal red, precise technical details, and direct language.
 - The operating principles behind David's public work
 - Featured writing and the **Best Practices for Everyday IT** newsletter
 - Personal background, community work, and current projects
+- A direct contact form plus David's public Discord community
 - Accessible navigation, keyboard states, reduced-motion support, and custom metadata
 
 ## Stack
