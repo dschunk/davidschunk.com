@@ -24,3 +24,20 @@ timeout \
   --kill-after="${SITES_BUILD_KILL_AFTER:-10s}" \
   "${SITES_BUILD_TIMEOUT:-3m}" \
   "${vinext}" build
+
+generated_config="${SITES_PROJECT_ROOT}/dist/server/wrangler.json"
+if [[ ! -f "${generated_config}" ]]; then
+  echo "vinext build completed but ${generated_config} was not generated." >&2
+  exit 70
+fi
+
+# Cloudflare Builds currently runs `npx wrangler deploy` after `npm run build`.
+# Wrangler supports a generated-config redirect file specifically for framework
+# builds. Point it at vinext's compiled Worker config so production deploys the
+# actual application bundle instead of the source/template Worker config.
+mkdir -p "${SITES_PROJECT_ROOT}/.wrangler/deploy"
+cat > "${SITES_PROJECT_ROOT}/.wrangler/deploy/config.json" <<'JSON'
+{"configPath":"../../dist/server/wrangler.json"}
+JSON
+
+echo "Prepared Wrangler deployment redirect -> dist/server/wrangler.json"
