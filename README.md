@@ -1,5 +1,7 @@
 # davidschunk.com
 
+> **Personal-site notice:** This website and repository are maintained by David Schunk in a personal capacity. References to employers are biographical only and do not imply sponsorship, endorsement, or affiliation with the site's independent projects, writing, or community work. Employer confidential or proprietary information, internal systems, customer data, credentials, and employer work product must not be published here.
+
 The source for [davidschunk.com](https://www.davidschunk.com/) — David Schunk's
 personal home on the web.
 
