@@ -58,12 +58,12 @@ export default function Home() {
           <a href="#work">Work</a>
           <a href="#writing">Writing</a>
           <a href="#story">Story</a>
-          <a href="/hire">Hire Me</a>
+          <a href="/hire">Work With Me</a>
           <a href="#contact">Contact</a>
         </nav>
 
         <a className="header-discord" href="/hire">
-          Hire Me <Arrow />
+          Work With Me <Arrow />
         </a>
       </header>
 
@@ -79,7 +79,7 @@ export default function Home() {
             </p>
             <div className="hero-actions">
               <a className="primary-action" href="#work">Explore my work <Arrow /></a>
-              <a className="quiet-action" href="/hire">Hire me <Arrow /></a>
+              <a className="quiet-action" href="/hire">Work with me <Arrow /></a>
               <a className="quiet-action" href="https://github.com/dschunk" target="_blank" rel="noreferrer">Visit GitHub <Arrow /></a>
             </div>
             <dl className="hero-facts">
@@ -125,9 +125,10 @@ export default function Home() {
               <h2>Tools for the people who keep everything running.</h2>
             </div>
             <p>
-              My public work comes from real operational needs: make failure
-              visible, make the safe path obvious, and leave enough context for
-              someone else to succeed.
+              These are independent public projects maintained in my personal capacity,
+              using generalized technical knowledge and public documentation. They do not
+              publish employer confidential information, proprietary code, internal systems,
+              or customer data, and no employer endorsement is implied.
             </p>
           </header>
 
@@ -275,7 +276,7 @@ export default function Home() {
       <footer className="site-footer">
         <div className="content-width footer-inner">
           <span>© 2026 David M. Schunk</span>
-          <span>Smolensk → New Hampshire → Everywhere</span>
+          <span>Personal site · views and projects are my own · no employer endorsement implied</span>
           <a href="#top">Back to top ↑</a>
         </div>
       </footer>
