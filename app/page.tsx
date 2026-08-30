@@ -58,11 +58,12 @@ export default function Home() {
           <a href="#work">Work</a>
           <a href="#writing">Writing</a>
           <a href="#story">Story</a>
+          <a href="/hire">Hire Me</a>
           <a href="#contact">Contact</a>
         </nav>
 
-        <a className="header-discord" href="https://discord.gg/3phxzXBsAA" target="_blank" rel="noreferrer">
-          Join Discord <Arrow />
+        <a className="header-discord" href="/hire">
+          Hire Me <Arrow />
         </a>
       </header>
 
@@ -78,6 +79,7 @@ export default function Home() {
             </p>
             <div className="hero-actions">
               <a className="primary-action" href="#work">Explore my work <Arrow /></a>
+              <a className="quiet-action" href="/hire">Hire me <Arrow /></a>
               <a className="quiet-action" href="https://github.com/dschunk" target="_blank" rel="noreferrer">Visit GitHub <Arrow /></a>
             </div>
             <dl className="hero-facts">
