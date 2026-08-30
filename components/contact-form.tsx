@@ -8,7 +8,21 @@ import { Textarea } from "@/components/ui/textarea";
 
 type FormStatus = "idle" | "sending" | "success" | "error";
 
-export function ContactForm() {
+type ContactFormProps = {
+  defaultSubject?: string;
+  heading?: string;
+  description?: string;
+  messagePlaceholder?: string;
+  idleMessage?: string;
+};
+
+export function ContactForm({
+  defaultSubject = "",
+  heading = "Send a message",
+  description = "Your note is delivered privately.",
+  messagePlaceholder = "Give me the useful details.",
+  idleMessage = "I read every message myself.",
+}: ContactFormProps = {}) {
   const [status, setStatus] = useState<FormStatus>("idle");
 
   async function handleSubmit(event: FormEvent<HTMLFormElement>) {
@@ -55,8 +69,8 @@ export function ContactForm() {
     <form className="contact-form" onSubmit={handleSubmit}>
       <div className="form-header">
         <div>
-          <span>Send a message</span>
-          <p>Your note is delivered privately.</p>
+          <span>{heading}</span>
+          <p>{description}</p>
         </div>
         <span className="form-availability"><i /> Available</span>
       </div>
@@ -93,6 +107,7 @@ export function ContactForm() {
           <Input
             className="contact-input"
             name="subject"
+            defaultValue={defaultSubject}
             placeholder="What are we talking about?"
             minLength={2}
             maxLength={160}
@@ -105,7 +120,7 @@ export function ContactForm() {
           <Textarea
             className="contact-textarea"
             name="message"
-            placeholder="Give me the useful details."
+            placeholder={messagePlaceholder}
             rows={6}
             minLength={10}
             maxLength={5000}
@@ -121,7 +136,7 @@ export function ContactForm() {
 
       <div className="form-footer">
         <p className={`form-status form-status-${status}`} aria-live="polite">
-          {status === "idle" && "I read every message myself."}
+          {status === "idle" && idleMessage}
           {status === "sending" && "Sending your message…"}
           {status === "success" && "Thanks—your message is on its way."}
           {status === "error" && (
