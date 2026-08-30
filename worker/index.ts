@@ -34,6 +34,15 @@ const worker = {
       return Response.redirect(url.toString(), 308);
     }
 
+    if (url.pathname === "/__health") {
+      return Response.json({
+        ok: true,
+        service: "davidschunk.com",
+        runtime: "cloudflare-worker",
+        release: "2026-08-29-route-repair",
+      });
+    }
+
     if (url.pathname === "/_vinext/image") {
       const allowedWidths = [...DEFAULT_DEVICE_SIZES, ...DEFAULT_IMAGE_SIZES];
       return handleImageOptimization(request, {
