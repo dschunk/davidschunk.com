@@ -44,8 +44,8 @@ export default function WorkWithMePage() {
     <div className="site-frame">
       <header className="site-header">
         <Link className="brand" href="/" aria-label="David Schunk home">
-          <span className="brand-mark">DS</span>
-          <span className="brand-copy"><strong>David Schunk</strong><small>Systems, stories & useful work</small></span>
+          <img src="/mountain-mark.svg" alt="" width="42" height="28" />
+          <span className="brand-copy"><strong>David Schunk</strong><small>Infrastructure · open source · writing</small></span>
         </Link>
 
         <nav aria-label="Primary navigation">
@@ -93,7 +93,7 @@ export default function WorkWithMePage() {
         </section>
 
         <section className="principle-section">
-          <div className="content-width principle-inner">
+          <div className="principle-inner">
             <p className="eyebrow">Clear boundaries</p>
             <blockquote>
               Personal projects stay separate from my employer, its systems, and its information.
@@ -107,7 +107,7 @@ export default function WorkWithMePage() {
           </div>
         </section>
 
-        <section className="contact-section content-width" id="contact">
+        <section className="contact-section" id="contact">
           <div className="contact-copy">
             <p className="eyebrow">Open channel</p>
             <h2>Tell me what you have in mind.</h2>
@@ -136,7 +136,7 @@ export default function WorkWithMePage() {
 
       <footer className="site-footer">
         <div className="content-width footer-inner">
-          <span>© 2026 David M. Schunk</span>
+          <span>© 2026 David Schunk</span>
           <span>Personal site · independent projects · no employer endorsement implied</span>
           <Link href="/">Back to main site →</Link>
         </div>
