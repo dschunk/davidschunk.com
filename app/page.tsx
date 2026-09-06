@@ -212,7 +212,7 @@ export default function Home() {
               />
               <div className="connect-links">
                 <a href="https://github.com/dschunk" target="_blank" rel="noreferrer"><span>GH</span><b>GitHub</b><small>@dschunk</small></a>
-                <a href="https://www.linkedin.com/in/david-schunk" target="_blank" rel="noreferrer"><span>in</span><b>LinkedIn</b><small>David Schunk</small></a>
+                <a href="https://www.linkedin.com/in/dschunk" target="_blank" rel="noreferrer"><span>in</span><b>LinkedIn</b><small>David Schunk</small></a>
                 <a href="https://discord.gg/3phxzXBsAA" target="_blank" rel="noreferrer"><span>DC</span><b>Discord</b><small>Join the community</small></a>
               </div>
             </div>
