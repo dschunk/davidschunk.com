@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "David Schunk — Systems, Stories & Useful Work",
+  title: "David Schunk — Infrastructure, Systems & Useful Work",
   description:
-    "David Schunk is an IT engineer, infrastructure builder, writer, gamer, podcaster, and Russian adoptee.",
+    "David Schunk is an IT engineer and infrastructure builder focused on practical systems, automation, documentation, open-source tooling, and community.",
   metadataBase: new URL("https://www.davidschunk.com"),
   icons: {
     icon: "/favicon.svg",
