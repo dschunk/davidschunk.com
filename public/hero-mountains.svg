@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 760" role="img" aria-labelledby="title desc">
+  <title id="title">Layered green mountain landscape</title>
+  <desc id="desc">Abstract evergreen mountains and forest ridges in deep green tones.</desc>
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#738b7b"/>
+      <stop offset=".34" stop-color="#466555"/>
+      <stop offset="1" stop-color="#0b241b"/>
+    </linearGradient>
+    <linearGradient id="glow" x1="1" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#d6c49d" stop-opacity=".72"/>
+      <stop offset=".42" stop-color="#8ca08c" stop-opacity=".24"/>
+      <stop offset="1" stop-color="#17372a" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="ridgeA" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#315342"/>
+      <stop offset="1" stop-color="#16382a"/>
+    </linearGradient>
+    <linearGradient id="ridgeB" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#173b2c"/>
+      <stop offset="1" stop-color="#0d2b20"/>
+    </linearGradient>
+    <linearGradient id="ridgeC" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#102d22"/>
+      <stop offset="1" stop-color="#071c15"/>
+    </linearGradient>
+    <filter id="soft"><feGaussianBlur stdDeviation="18"/></filter>
+    <pattern id="topo" width="180" height="120" patternUnits="userSpaceOnUse">
+      <path d="M-20 35C30 0 80 0 130 35s100 35 150 0M-20 62c50-35 100-35 150 0s100 35 150 0M-20 89c50-35 100-35 150 0s100 35 150 0" fill="none" stroke="#d7e3d9" stroke-opacity=".045" stroke-width="1.2"/>
+    </pattern>
+  </defs>
+  <rect width="1600" height="760" fill="url(#sky)"/>
+  <ellipse cx="1270" cy="90" rx="500" ry="210" fill="url(#glow)" filter="url(#soft)"/>
+  <path d="M0 390 115 330 225 365 355 248 470 320 595 245 720 310 860 210 980 286 1112 178 1260 286 1390 220 1600 334V760H0Z" fill="#496556" opacity=".68"/>
+  <path d="M0 466 155 370 270 430 405 310 520 392 650 310 795 398 940 285 1070 350 1210 250 1355 352 1490 300 1600 365V760H0Z" fill="url(#ridgeA)"/>
+  <path d="M0 555 135 472 245 514 350 430 470 500 585 390 712 470 825 406 950 500 1080 386 1192 455 1300 405 1415 484 1510 432 1600 472V760H0Z" fill="url(#ridgeB)"/>
+  <path d="M0 642 86 590 150 622 216 546 282 605 350 520 418 596 490 522 566 602 640 515 710 584 780 532 855 611 930 520 1010 592 1088 510 1160 580 1238 514 1315 598 1398 530 1470 600 1540 548 1600 580V760H0Z" fill="url(#ridgeC)"/>
+  <g fill="#061710" opacity=".95">
+    <path d="M120 760V570l-42 76h28l-47 70h39l-52 44h74Z"/><path d="M205 760V596l-34 62h24l-39 59h31l-42 43h60Z"/>
+    <path d="M1328 760V538l-52 94h36l-58 86h45l-51 42h80Z"/><path d="M1436 760V580l-38 69h26l-43 64h34l-45 47h66Z"/><path d="M1530 760V610l-31 56h21l-35 53h28l-38 41h55Z"/>
+  </g>
+  <rect width="1600" height="760" fill="url(#topo)"/>
+  <rect width="1600" height="760" fill="#02130d" opacity=".12"/>
+</svg>
