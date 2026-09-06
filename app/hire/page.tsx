@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 
 import { ContactForm } from "@/components/contact-form";
 
@@ -42,16 +43,16 @@ export default function WorkWithMePage() {
   return (
     <div className="site-frame">
       <header className="site-header">
-        <a className="brand" href="/" aria-label="David Schunk home">
+        <Link className="brand" href="/" aria-label="David Schunk home">
           <span className="brand-mark">DS</span>
           <span className="brand-copy"><strong>David Schunk</strong><small>Systems, stories & useful work</small></span>
-        </a>
+        </Link>
 
         <nav aria-label="Primary navigation">
-          <a href="/#work">Work</a>
-          <a href="/#writing">Writing</a>
-          <a href="/#story">Story</a>
-          <a href="/#contact">Contact</a>
+          <Link href="/#work">Work</Link>
+          <Link href="/#writing">Writing</Link>
+          <Link href="/#story">Story</Link>
+          <Link href="/#contact">Contact</Link>
         </nav>
 
         <a className="header-discord" href="#contact">
@@ -137,7 +138,7 @@ export default function WorkWithMePage() {
         <div className="content-width footer-inner">
           <span>© 2026 David M. Schunk</span>
           <span>Personal site · independent projects · no employer endorsement implied</span>
-          <a href="/">Back to main site →</a>
+          <Link href="/">Back to main site →</Link>
         </div>
       </footer>
     </div>
