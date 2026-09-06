@@ -195,13 +195,13 @@ export default function Home() {
             </article>
 
             <div className="article-list">
-              <a href="https://www.davidschunk.com/2026/06/dns-most-important-service-you-dont.html" target="_blank" rel="noreferrer">
+              <a href="https://www.linkedin.com/pulse/dns-most-important-service-you-dont-think-david-schunk-ymlde" target="_blank" rel="noreferrer">
                 <span>Infrastructure</span><strong>DNS: The Most Important Service You Don&apos;t Think About</strong><Arrow />
               </a>
-              <a href="https://www.davidschunk.com/2026/08/windows-11-gaming-crashes-should-you-be.html" target="_blank" rel="noreferrer">
+              <a href="https://www.linkedin.com/pulse/windows-11-gaming-crashes-should-you-concerned-david-schunk-glkqc" target="_blank" rel="noreferrer">
                 <span>Windows + gaming</span><strong>Windows 11 Gaming Crashes: Should You Be Concerned?</strong><Arrow />
               </a>
-              <a href="https://www.davidschunk.com/2026/06/cybersecurity-update-from-your-friendly.html" target="_blank" rel="noreferrer">
+              <a href="https://www.linkedin.com/pulse/cybersecurity-update-from-your-friendly-neighborhood-job-david-schunk-usxve" target="_blank" rel="noreferrer">
                 <span>Cybersecurity</span><strong>The Fake Recruiter Domain That Was Two Days Old</strong><Arrow />
               </a>
             </div>
