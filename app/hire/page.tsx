@@ -44,7 +44,7 @@ export default function WorkWithMePage() {
     <div className="site-frame">
       <header className="site-header">
         <Link className="brand" href="/" aria-label="David Schunk home">
-          <img src="/mountain-mark.svg" alt="" width="42" height="28" />
+          <img src="/mountain-mark.svg" alt="" width="42" height="28" style={{ filter: "brightness(0) invert(1)" }} />
           <span className="brand-copy"><strong>David Schunk</strong><small>Infrastructure · open source · writing</small></span>
         </Link>
 
