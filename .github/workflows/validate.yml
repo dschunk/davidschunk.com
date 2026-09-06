@@ -45,4 +45,4 @@ jobs:
         run: node --test tests/ui-components.test.mjs
 
       - name: Wrangler configuration dry run
-        run: npx wrangler deploy --dry-run --config wrangler.jsonc
+        run: npx wrangler deploy --dry-run --config dist/server/wrangler.json
