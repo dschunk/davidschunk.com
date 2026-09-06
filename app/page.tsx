@@ -1,5 +1,3 @@
-import Link from "next/link";
-
 import { ContactForm } from "@/components/contact-form";
 
 const Arrow = () => (
@@ -60,13 +58,13 @@ export default function Home() {
           <a href="#work">Work</a>
           <a href="#writing">Writing</a>
           <a href="#story">Story</a>
-          <Link href="/hire">Work With Me</Link>
+          <a href="/hire">Work With Me</a>
           <a href="#contact">Contact</a>
         </nav>
 
-        <Link className="header-discord" href="/hire">
+        <a className="header-discord" href="/hire">
           Work With Me <Arrow />
-        </Link>
+        </a>
       </header>
 
       <main id="top">
@@ -81,7 +79,7 @@ export default function Home() {
             </p>
             <div className="hero-actions">
               <a className="primary-action" href="#work">Explore my work <Arrow /></a>
-              <Link className="quiet-action" href="/hire">Work with me <Arrow /></Link>
+              <a className="quiet-action" href="/hire">Work with me <Arrow /></a>
               <a className="quiet-action" href="https://github.com/dschunk" target="_blank" rel="noreferrer">Visit GitHub <Arrow /></a>
             </div>
             <dl className="hero-facts">
