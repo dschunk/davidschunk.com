@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 import { ContactForm } from "@/components/contact-form";
 
 const Arrow = () => (
@@ -13,7 +15,7 @@ const projects = [
     category: "PowerShell · Windows infrastructure",
     summary:
       "Practical tools for incident evidence, server health, Active Directory, Group Policy, patching, certificates, and safer day-to-day operations.",
-    proof: "35 standalone tools · 14 SchunkOps commands",
+    proof: "28 SchunkOps commands · incident, fleet & AD tooling",
     href: "https://github.com/dschunk/windows-it-toolkit",
   },
   {
@@ -22,7 +24,7 @@ const projects = [
     category: "Entra ID · Exchange Online · Teams",
     summary:
       "Read-only security audits for privileged roles, MFA, Conditional Access, guests, mailbox forwarding, licensing, domains, and external access.",
-    proof: "12 least-privilege security audits",
+    proof: "20 read-only PowerShell tools",
     href: "https://github.com/dschunk/microsoft-365-ops",
   },
   {
@@ -58,13 +60,13 @@ export default function Home() {
           <a href="#work">Work</a>
           <a href="#writing">Writing</a>
           <a href="#story">Story</a>
-          <a href="/hire">Work With Me</a>
+          <Link href="/hire">Work With Me</Link>
           <a href="#contact">Contact</a>
         </nav>
 
-        <a className="header-discord" href="/hire">
+        <Link className="header-discord" href="/hire">
           Work With Me <Arrow />
-        </a>
+        </Link>
       </header>
 
       <main id="top">
@@ -79,7 +81,7 @@ export default function Home() {
             </p>
             <div className="hero-actions">
               <a className="primary-action" href="#work">Explore my work <Arrow /></a>
-              <a className="quiet-action" href="/hire">Work with me <Arrow /></a>
+              <Link className="quiet-action" href="/hire">Work with me <Arrow /></Link>
               <a className="quiet-action" href="https://github.com/dschunk" target="_blank" rel="noreferrer">Visit GitHub <Arrow /></a>
             </div>
             <dl className="hero-facts">
@@ -246,9 +248,6 @@ export default function Home() {
             <div className="community-links">
               <a href="https://russianadoptees.com" target="_blank" rel="noreferrer">
                 <span>Community and advocacy</span><strong>Russian Adoptees Organization</strong><p>A global home for connection, heritage, advocacy, and adoptee voices.</p><Arrow />
-              </a>
-              <a href="https://askyup.com" target="_blank" rel="noreferrer">
-                <span>Internet experiment</span><strong>YUP</strong><p>A platform built around finding the answer, person, thing, or opportunity that actually helps.</p><Arrow />
               </a>
             </div>
           </div>
