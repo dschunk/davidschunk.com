@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 620" role="img" aria-labelledby="title desc">
+  <title id="title">Mountain overlook</title>
+  <desc id="desc">A stylized New England mountain overlook with layered green ridges, lake, pines, and rock.</desc>
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#d7d0b5"/><stop offset=".42" stop-color="#8da18c"/><stop offset="1" stop-color="#385545"/></linearGradient>
+    <linearGradient id="lake" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#627f70"/><stop offset="1" stop-color="#27483a"/></linearGradient>
+    <linearGradient id="rock" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#817d6d"/><stop offset="1" stop-color="#4b5048"/></linearGradient>
+  </defs>
+  <rect width="900" height="620" fill="url(#sky)"/>
+  <circle cx="690" cy="108" r="72" fill="#ead9ad" opacity=".48"/>
+  <path d="M0 310 140 214 240 265 360 168 470 244 590 148 700 228 810 170 900 220V620H0Z" fill="#607866" opacity=".85"/>
+  <path d="M0 350 130 270 240 324 350 250 460 324 580 235 690 300 785 250 900 305V620H0Z" fill="#355744"/>
+  <path d="M0 392c110-22 160-18 255 7 124 32 210 19 321-10 116-30 211-24 324 3v228H0Z" fill="url(#lake)"/>
+  <path d="M0 515 120 438l76 35 82-46 72 54 96-70 88 65 96-42 83 52 91-42 96 55v121H0Z" fill="#17392b"/>
+  <g fill="#0b241a">
+    <path d="M84 620V350l-60 107h42L5 545h48L0 620Z"/><path d="M156 620V410l-45 81h31l-48 72h38l-44 57Z"/><path d="M782 620V372l-55 99h38l-58 84h44l-49 65Z"/><path d="M852 620V430l-40 72h28l-43 64h34l-41 54Z"/>
+  </g>
+  <path d="M0 534c117-20 210-9 298 30 74 32 162 38 257 20 104-20 216-9 345 36H0Z" fill="url(#rock)"/>
+  <path d="M24 559c95-21 168-17 247 14M405 574c92-13 170-7 255 19" fill="none" stroke="#a7a18b" stroke-width="4" opacity=".42" stroke-linecap="round"/>
+</svg>
