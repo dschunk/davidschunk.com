@@ -39,11 +39,11 @@ const projects = [
     href: "https://dschunk.github.io/infrastructure-dashboard/",
   },
   {
-    icon: "8M",
-    name: "FiveM Server Ops",
-    summary: "Monitoring, backup validation, resource inventory, configuration safety, logs, status data, and alerts for serious communities.",
-    tags: ["FiveM", "Automation", "Operations"],
-    href: "https://github.com/dschunk/fivem-server-ops",
+    icon: "EIT",
+    name: "Everyday IT Tips",
+    summary: "A permanent, searchable library of practical Windows, Active Directory, Windows Server, security, infrastructure, and troubleshooting guides.",
+    tags: ["Windows", "Writing", "Field Guides"],
+    href: "https://everydayittips.com/",
   },
 ];
 
@@ -149,21 +149,21 @@ export default function Home() {
             <aside className="latest-writing" id="writing">
               <div className="latest-writing-head">
                 <p className="mountain-section-label">Latest writing</p>
-                <a href="https://www.linkedin.com/newsletters/best-practices-for-everyday-it-7075059974573314048/" target="_blank" rel="noreferrer">View all writing <Arrow /></a>
+                <a href="https://everydayittips.com/" target="_blank" rel="noreferrer">Visit Everyday IT Tips <Arrow /></a>
               </div>
               <article className="writing-feature-card">
                 <div className="writing-image">
                   <img src="/hero-mountains.svg" alt="Green mountain ridgeline" width="800" height="380" />
-                  <span>Featured</span>
+                  <span>Publication</span>
                 </div>
                 <div className="writing-feature-copy">
-                  <h3>Build It Like You Won&apos;t Be There Tomorrow</h3>
-                  <small>Field guide · maintainable systems</small>
+                  <h3>Windows, without the guesswork.</h3>
+                  <small>Everyday IT Tips · practical field guides</small>
                   <p>
-                    Good infrastructure is not just about what works today—it is about
-                    what someone else can understand, operate, recover, and improve tomorrow.
+                    Step-by-step Windows, Active Directory, Windows Server, security,
+                    infrastructure, and troubleshooting guides built to stay open beside you while you work.
                   </p>
-                  <a href="https://github.com/dschunk/build-it-like-you-wont-be-there" target="_blank" rel="noreferrer">Read the field guide <Arrow /></a>
+                  <a href="https://everydayittips.com/topics/windows/" target="_blank" rel="noreferrer">Open the Windows hub <Arrow /></a>
                 </div>
               </article>
             </aside>
