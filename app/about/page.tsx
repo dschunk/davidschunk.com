@@ -22,8 +22,8 @@ export default function AboutPage() {
       </header>
 
       <main>
-        <section className="mountain-section mountain-shell" style={{ paddingTop: "64px", paddingBottom: "72px" }}>
-          <div style={{ display: "grid", gridTemplateColumns: "minmax(260px, .78fr) minmax(0, 1.22fr)", gap: "64px", alignItems: "start" }}>
+        <section className="mountain-section mountain-shell" style={{ paddingTop: "128px", paddingBottom: "72px" }}>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))", gap: "clamp(32px, 6vw, 64px)", alignItems: "start" }}>
             <div>
               <img
                 src="/david-schunk-portrait.svg"
