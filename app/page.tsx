@@ -25,6 +25,13 @@ const projects = [
     href: "https://github.com/dschunk/windows-it-toolkit",
   },
   {
+    icon: "FS",
+    name: "Windows Infrastructure Lab",
+    summary: "An enterprise-style Windows lab covering Active Directory, Group Policy, segmented routing, dedicated file services, DFS, FSRM, VSS, and recovery testing.",
+    tags: ["Windows Server", "Active Directory", "Infrastructure"],
+    href: "https://everydayittips.com/guides/windows-file-server-dfs-fsrm-vss/",
+  },
+  {
     icon: "365",
     name: "Microsoft 365 Ops",
     summary: "Read-only security audits, operational scripts, and practical playbooks for Microsoft 365, Entra ID, and Exchange Online.",
@@ -154,16 +161,16 @@ export default function Home() {
               <article className="writing-feature-card">
                 <div className="writing-image">
                   <img src="/hero-mountains.svg" alt="Green mountain ridgeline" width="800" height="380" />
-                  <span>Publication</span>
+                  <span>Windows Server</span>
                 </div>
                 <div className="writing-feature-copy">
-                  <h3>Windows, without the guesswork.</h3>
-                  <small>Everyday IT Tips · practical field guides</small>
+                  <h3>Build a Windows file server that users can actually inherit.</h3>
+                  <small>Everyday IT Tips · DFS / FSRM / VSS</small>
                   <p>
-                    Step-by-step Windows, Active Directory, Windows Server, security,
-                    infrastructure, and troubleshooting guides built to stay open beside you while you work.
+                    A practical build from a dedicated data disk and AGDLP permissions through SMB,
+                    DFS Namespace, Group Policy drive mappings, quotas, Previous Versions, and routed management.
                   </p>
-                  <a href="https://everydayittips.com/topics/windows/" target="_blank" rel="noreferrer">Open the Windows hub <Arrow /></a>
+                  <a href="https://everydayittips.com/guides/windows-file-server-dfs-fsrm-vss/" target="_blank" rel="noreferrer">Read the field guide <Arrow /></a>
                 </div>
               </article>
             </aside>
