@@ -66,7 +66,7 @@ export default function Home() {
         <nav aria-label="Primary navigation">
           <a href="#work">Work</a>
           <a href="#writing">Writing</a>
-          <a href="#story">Story</a>
+          <a href="/about">About</a>
           <a href="#contact">Contact</a>
         </nav>
 
@@ -191,7 +191,7 @@ export default function Home() {
                     Today I work at the intersection of infrastructure, automation, documentation,
                     and community—and I build public tools to make IT a little easier for the next engineer.
                   </p>
-                  <a href="https://russianadoptees.com" target="_blank" rel="noreferrer">Russian Adoptees Organization <Arrow /></a>
+                  <a href="/about">About David <Arrow /></a>
                 </div>
               </div>
             </div>
@@ -220,6 +220,7 @@ export default function Home() {
               <div className="connect-links">
                 <a href="https://github.com/dschunk" target="_blank" rel="noreferrer"><span>GH</span><b>GitHub</b><small>@dschunk</small></a>
                 <a href="https://www.linkedin.com/in/dschunk" target="_blank" rel="noreferrer"><span>in</span><b>LinkedIn</b><small>David Schunk</small></a>
+                <a href="https://meritpages.com/DavidSchunk" target="_blank" rel="noreferrer"><span>M</span><b>Merit</b><small>Academic & career record</small></a>
                 <a href="https://discord.gg/3phxzXBsAA" target="_blank" rel="noreferrer"><span>DC</span><b>Discord</b><small>Join the community</small></a>
               </div>
             </div>
@@ -233,7 +234,7 @@ export default function Home() {
             <img src="/mountain-mark.svg" alt="" width="42" height="28" />
             <div><strong>David Schunk</strong><small>Infrastructure. People. A brighter tomorrow.</small></div>
           </div>
-          <nav aria-label="Footer navigation"><a href="#work">Work</a><a href="#writing">Writing</a><a href="#story">Story</a><a href="#contact">Contact</a></nav>
+          <nav aria-label="Footer navigation"><a href="#work">Work</a><a href="#writing">Writing</a><a href="/about">About</a><a href="https://meritpages.com/DavidSchunk" target="_blank" rel="noreferrer">Merit</a><a href="#contact">Contact</a></nav>
           <span className="footer-note">Same systems. Higher places.</span>
         </div>
       </footer>
