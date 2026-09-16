@@ -1,4 +1,13 @@
+import type { Metadata } from "next";
+import Image from "next/image";
+import Link from "next/link";
+
 import { ContactForm } from "@/components/contact-form";
+
+export const metadata: Metadata = {
+  alternates: { canonical: "/" },
+  openGraph: { url: "https://www.davidschunk.com/" },
+};
 
 const Arrow = () => (
   <svg aria-hidden="true" viewBox="0 0 20 20" width="20" height="20">
@@ -14,6 +23,24 @@ const expertise = [
   ["VM", "VMware"],
   ["CF", "Cloudflare"],
   ["DOC", "Documentation"],
+];
+
+const fieldNotes = [
+  {
+    category: "Windows repair",
+    title: "Repair Windows with SFC and DISM",
+    href: "https://everydayittips.com/guides/windows-sfc-dism-repair/",
+  },
+  {
+    category: "Group Policy",
+    title: "Use gpresult and RSoP to prove what applied",
+    href: "https://everydayittips.com/guides/gpresult-rsop-troubleshooting/",
+  },
+  {
+    category: "Authentication",
+    title: "Troubleshoot Windows Time and Kerberos",
+    href: "https://everydayittips.com/guides/windows-time-kerberos-troubleshooting/",
+  },
 ];
 
 const projects = [
@@ -59,18 +86,18 @@ export default function Home() {
     <div className="mountain-site">
       <header className="mountain-header">
         <a className="mountain-brand" href="#top" aria-label="David Schunk home">
-          <img src="/mountain-mark.svg" alt="" width="46" height="30" />
+          <Image src="/mountain-mark.svg" alt="" width={46} height={30} unoptimized />
           <span>David Schunk</span>
         </a>
 
         <nav aria-label="Primary navigation">
           <a href="#work">Work</a>
           <a href="#writing">Writing</a>
-          <a href="/about">About</a>
+          <Link href="/about">About</Link>
           <a href="#contact">Contact</a>
         </nav>
 
-        <a className="mountain-header-action" href="/hire">Work With Me <Arrow /></a>
+        <Link className="mountain-header-action" href="/hire">Work With Me <Arrow /></Link>
       </header>
 
       <main id="top">
@@ -85,7 +112,7 @@ export default function Home() {
                 and confidently hand to the next engineer.
               </p>
               <div className="mountain-actions">
-                <a className="mountain-button mountain-button-primary" href="/hire">Work With Me <Arrow /></a>
+                <Link className="mountain-button mountain-button-primary" href="/hire">Work With Me <Arrow /></Link>
                 <a className="mountain-button mountain-button-ghost" href="#work">See My Work <Arrow /></a>
               </div>
             </div>
@@ -103,7 +130,7 @@ export default function Home() {
                   <p>&nbsp;&nbsp;A brighter tomorrow.<span className="terminal-cursor" /></p>
                 </div>
                 <div className="systems-ridge">
-                  <img src="/story-mountains.svg" alt="Stylized mountain landscape" width="520" height="330" />
+                  <Image src="/story-mountains.svg" alt="Stylized mountain landscape" width={520} height={330} unoptimized />
                   <span>Same systems.<br />Higher places.</span>
                 </div>
               </div>
@@ -125,7 +152,7 @@ export default function Home() {
                 <span className="expertise-item" key={label}><i>{icon}</i>{label}</span>
               ))}
             </div>
-            <span className="strip-signature"><img src="/mountain-mark.svg" alt="" width="34" height="22" /> Practical tech<br />real-world impact</span>
+            <span className="strip-signature"><Image src="/mountain-mark.svg" alt="" width={34} height={22} unoptimized /> Practical tech<br />real-world impact</span>
           </div>
         </section>
 
@@ -160,7 +187,7 @@ export default function Home() {
               </div>
               <article className="writing-feature-card">
                 <div className="writing-image">
-                  <img src="/hero-mountains.svg" alt="Green mountain ridgeline" width="800" height="380" />
+                  <Image src="/hero-mountains.svg" alt="Green mountain ridgeline" width={800} height={380} unoptimized />
                   <span>Windows Server</span>
                 </div>
                 <div className="writing-feature-copy">
@@ -173,6 +200,15 @@ export default function Home() {
                   <a href="https://everydayittips.com/guides/windows-file-server-dfs-fsrm-vss/" target="_blank" rel="noreferrer">Read the field guide <Arrow /></a>
                 </div>
               </article>
+              <div className="writing-quick-list" aria-label="More recent field guides">
+                {fieldNotes.map((note, index) => (
+                  <a href={note.href} target="_blank" rel="noreferrer" key={note.title}>
+                    <span>{String(index + 1).padStart(2, "0")}</span>
+                    <div><small>{note.category}</small><strong>{note.title}</strong></div>
+                    <Arrow />
+                  </a>
+                ))}
+              </div>
             </aside>
           </div>
         </section>
@@ -182,7 +218,7 @@ export default function Home() {
             <div className="story-panel">
               <p className="mountain-section-label">My story</p>
               <div className="story-panel-body">
-                <img src="/story-mountains.svg" alt="Stylized New England mountain overlook" width="900" height="620" />
+                <Image src="/story-mountains.svg" alt="Stylized New England mountain overlook" width={900} height={620} unoptimized />
                 <div className="story-text">
                   <h2>From Russia to New Hampshire, building on the internet.</h2>
                   <p>
@@ -191,7 +227,7 @@ export default function Home() {
                     Today I work at the intersection of infrastructure, automation, documentation,
                     and community—and I build public tools to make IT a little easier for the next engineer.
                   </p>
-                  <a href="/about">About David <Arrow /></a>
+                  <Link href="/about">About David <Arrow /></Link>
                 </div>
               </div>
             </div>
@@ -209,7 +245,7 @@ export default function Home() {
                   <p className="mountain-section-label">Let&apos;s connect</p>
                   <h2>Good people build great things.</h2>
                 </div>
-                <img src="/mountain-mark.svg" alt="" width="42" height="28" />
+                <Image src="/mountain-mark.svg" alt="" width={42} height={28} unoptimized />
               </div>
               <ContactForm
                 heading="Send a message"
@@ -234,7 +270,7 @@ export default function Home() {
             <img src="/mountain-mark.svg" alt="" width="42" height="28" />
             <div><strong>David Schunk</strong><small>Infrastructure. People. A brighter tomorrow.</small></div>
           </div>
-          <nav aria-label="Footer navigation"><a href="#work">Work</a><a href="#writing">Writing</a><a href="/about">About</a><a href="https://meritpages.com/DavidSchunk" target="_blank" rel="noreferrer">Merit</a><a href="#contact">Contact</a></nav>
+          <nav aria-label="Footer navigation"><a href="#work">Work</a><a href="#writing">Writing</a><Link href="/about">About</Link><a href="https://meritpages.com/DavidSchunk" target="_blank" rel="noreferrer">Merit</a><a href="#contact">Contact</a></nav>
           <span className="footer-note">Same systems. Higher places.</span>
         </div>
       </footer>
