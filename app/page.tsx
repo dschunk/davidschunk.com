@@ -267,7 +267,7 @@ export default function Home() {
       <footer className="mountain-footer">
         <div className="mountain-shell mountain-footer-inner">
           <div className="footer-brand">
-            <img src="/mountain-mark.svg" alt="" width="42" height="28" />
+            <Image src="/mountain-mark.svg" alt="" width={42} height={28} unoptimized />
             <div><strong>David Schunk</strong><small>Infrastructure. People. A brighter tomorrow.</small></div>
           </div>
           <nav aria-label="Footer navigation"><a href="#work">Work</a><a href="#writing">Writing</a><Link href="/about">About</Link><a href="https://meritpages.com/DavidSchunk" target="_blank" rel="noreferrer">Merit</a><a href="#contact">Contact</a></nav>
