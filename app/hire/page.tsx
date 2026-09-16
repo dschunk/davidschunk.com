@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 
 import { ContactForm } from "@/components/contact-form";
@@ -7,6 +8,13 @@ export const metadata: Metadata = {
   title: "Work With Me | David Schunk",
   description:
     "Independent projects, open-source collaboration, writing, speaking, community technology, and project conversations with David Schunk.",
+  alternates: { canonical: "/hire" },
+  openGraph: {
+    url: "https://www.davidschunk.com/hire",
+    title: "Work With Me | David Schunk",
+    description:
+      "Open-source collaboration, writing, speaking, community technology, and independent project conversations.",
+  },
 };
 
 const Arrow = () => (
@@ -44,14 +52,14 @@ export default function WorkWithMePage() {
     <div className="site-frame">
       <header className="site-header">
         <Link className="brand" href="/" aria-label="David Schunk home">
-          <img src="/mountain-mark.svg" alt="" width="42" height="28" style={{ filter: "brightness(0) invert(1)" }} />
+          <Image src="/mountain-mark.svg" alt="" width={42} height={28} className="brand-mountain-mark" unoptimized />
           <span className="brand-copy"><strong>David Schunk</strong><small>Infrastructure · open source · writing</small></span>
         </Link>
 
         <nav aria-label="Primary navigation">
           <Link href="/#work">Work</Link>
           <Link href="/#writing">Writing</Link>
-          <Link href="/#story">Story</Link>
+          <Link href="/about">About</Link>
           <Link href="/#contact">Contact</Link>
         </nav>
 
