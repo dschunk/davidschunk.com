@@ -27,19 +27,19 @@ const expertise = [
 
 const fieldNotes = [
   {
-    category: "Windows repair",
-    title: "Repair Windows with SFC and DISM",
-    href: "https://everydayittips.com/guides/windows-sfc-dism-repair/",
+    category: "Windows Server",
+    title: "Baseline a new Windows Server before production",
+    href: "https://everydayittips.com/guides/windows-server-post-build-checklist/",
   },
   {
-    category: "Group Policy",
-    title: "Use gpresult and RSoP to prove what applied",
-    href: "https://everydayittips.com/guides/gpresult-rsop-troubleshooting/",
+    category: "Windows Networking",
+    title: "Troubleshoot network connectivity without guessing",
+    href: "https://everydayittips.com/guides/windows-network-troubleshooting-toolkit/",
   },
   {
-    category: "Authentication",
-    title: "Troubleshoot Windows Time and Kerberos",
-    href: "https://everydayittips.com/guides/windows-time-kerberos-troubleshooting/",
+    category: "PowerShell",
+    title: "Find what is eating disk space on Windows",
+    href: "https://everydayittips.com/guides/powershell-disk-space-triage/",
   },
 ];
 
@@ -191,13 +191,13 @@ export default function Home() {
                   <span>Windows Server</span>
                 </div>
                 <div className="writing-feature-copy">
-                  <h3>Build a Windows file server that users can actually inherit.</h3>
-                  <small>Everyday IT Tips · DFS / FSRM / VSS</small>
+                  <h3>Baseline a new Windows Server before it becomes production.</h3>
+                  <small>Everyday IT Tips · Windows Server / Operations</small>
                   <p>
-                    A practical build from a dedicated data disk and AGDLP permissions through SMB,
-                    DFS Namespace, Group Policy drive mappings, quotas, Previous Versions, and routed management.
+                    A practical post-build checklist for identity, networking, DNS, time, updates,
+                    security, remote management, monitoring, backup, recovery, and documentation.
                   </p>
-                  <a href="https://everydayittips.com/guides/windows-file-server-dfs-fsrm-vss/" target="_blank" rel="noreferrer">Read the field guide <Arrow /></a>
+                  <a href="https://everydayittips.com/guides/windows-server-post-build-checklist/" target="_blank" rel="noreferrer">Read the field guide <Arrow /></a>
                 </div>
               </article>
               <div className="writing-quick-list" aria-label="More recent field guides">
