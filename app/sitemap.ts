@@ -6,6 +6,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   return [
     { url: "https://www.davidschunk.com/", lastModified, changeFrequency: "weekly", priority: 1 },
     { url: "https://www.davidschunk.com/about", lastModified, changeFrequency: "monthly", priority: 0.8 },
-    { url: "https://www.davidschunk.com/hire", lastModified, changeFrequency: "monthly", priority: 0.7 },\n    { url: "https://www.davidschunk.com/research/ai-governance", lastModified, changeFrequency: "monthly", priority: 0.9 },
+    { url: "https://www.davidschunk.com/hire", lastModified, changeFrequency: "monthly", priority: 0.7 },
+    { url: "https://www.davidschunk.com/research/ai-governance", lastModified, changeFrequency: "monthly", priority: 0.9 },
   ];
 }
