@@ -188,16 +188,16 @@ export default function Home() {
               <article className="writing-feature-card">
                 <div className="writing-image">
                   <Image src="/hero-mountains.svg" alt="Green mountain ridgeline" width={800} height={380} unoptimized />
-                  <span>Windows Server</span>
+                  <span>AI Governance</span>
                 </div>
                 <div className="writing-feature-copy">
-                  <h3>Baseline a new Windows Server before it becomes production.</h3>
-                  <small>Everyday IT Tips · Windows Server / Operations</small>
+                  <h3>Checks and Balances for Artificial Intelligence</h3>
+                  <small>Research Paper · AI Safety / Governance · September 2026</small>
                   <p>
-                    A practical post-build checklist for identity, networking, DNS, time, updates,
-                    security, remote management, monitoring, backup, recovery, and documentation.
+                    A risk-tiered framework for AI safety, accountability, public trust, and innovation:
+                    rights for people, controls for deployments, independent evidence, and frontier safeguards.
                   </p>
-                  <a href="https://everydayittips.com/guides/windows-server-post-build-checklist/" target="_blank" rel="noreferrer">Read the field guide <Arrow /></a>
+                  <Link href="/research/ai-governance">Read the research paper <Arrow /></Link>
                 </div>
               </article>
               <div className="writing-quick-list" aria-label="More recent field guides">
