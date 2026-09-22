@@ -1,154 +1,139 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import Link from "next/link";
 
 import { ContactForm } from "@/components/contact-form";
+import { SiteFooter, SiteHeader } from "@/components/site-chrome";
 
 export const metadata: Metadata = {
-  title: "Work With Me | David Schunk",
+  title: "Work With Me",
   description:
-    "Independent projects, open-source collaboration, writing, speaking, community technology, and project conversations with David Schunk.",
+    "Independent collaboration, writing, speaking, open-source, podcast, community, and technology conversations with David Schunk.",
   alternates: { canonical: "/hire" },
   openGraph: {
     url: "https://www.davidschunk.com/hire",
-    title: "Work With Me | David Schunk",
+    title: "Work With David Schunk",
     description:
-      "Open-source collaboration, writing, speaking, community technology, and independent project conversations.",
+      "Independent collaboration, writing, speaking, open-source, podcast, community, and technology conversations.",
   },
 };
 
-const Arrow = () => (
-  <svg aria-hidden="true" viewBox="0 0 20 20" width="20" height="20">
-    <path d="M3 10h13M11 5l5 5-5 5" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
-  </svg>
-);
+const Arrow = () => <span aria-hidden="true">↗</span>;
 
-const waysToConnect = [
+const waysToWork = [
   {
     number: "01",
-    name: "Open source",
-    category: "Tools · reviews · collaboration",
-    summary:
-      "Talk with me about public tooling, documentation, maintainability, operations patterns, contributions, and ideas that make infrastructure easier to understand and operate.",
+    title: "Technical collaboration",
+    copy: "Open-source work, infrastructure thinking, practical tooling, documentation, reviews, troubleshooting approaches, and projects where operations experience is useful.",
   },
   {
     number: "02",
-    name: "Writing & speaking",
-    category: "Articles · podcasts · technical conversations",
-    summary:
-      "I am open to conversations about practical IT, systems thinking, documentation, adoption, community building, and the lessons behind the work.",
+    title: "Writing & research",
+    copy: "Articles, technical explainers, essays, research projects, editorial conversations, and work that benefits from making complicated subjects understandable.",
   },
   {
     number: "03",
-    name: "Independent projects",
-    category: "Community · web · technology",
-    summary:
-      "If you have an interesting independent project, community initiative, or technical idea that fits my experience, send it over and I will take a look.",
+    title: "Podcasts & speaking",
+    copy: "Conversations about IT, adoption, identity, community building, systems thinking, documentation, and the experience behind the work.",
+  },
+  {
+    number: "04",
+    title: "Community projects",
+    copy: "Adoptee initiatives, nonprofit or volunteer technology, public-interest projects, resource development, and useful infrastructure for communities.",
   },
 ];
 
 export default function WorkWithMePage() {
   return (
-    <div className="site-frame">
-      <header className="site-header">
-        <Link className="brand" href="/" aria-label="David Schunk home">
-          <Image src="/mountain-mark.svg" alt="" width={42} height={28} className="brand-mountain-mark" unoptimized />
-          <span className="brand-copy"><strong>David Schunk</strong><small>Infrastructure · open source · writing</small></span>
-        </Link>
-
-        <nav aria-label="Primary navigation">
-          <Link href="/#work">Work</Link>
-          <Link href="/#writing">Writing</Link>
-          <Link href="/about">About</Link>
-          <Link href="/#contact">Contact</Link>
-        </nav>
-
-        <a className="header-discord" href="#contact">
-          Get in touch <Arrow />
-        </a>
-      </header>
+    <div className="ds-site">
+      <SiteHeader />
 
       <main>
-        <section className="work-section content-width">
-          <header className="section-heading">
+        <section className="ds-page-hero">
+          <div className="ds-shell ds-page-hero-grid">
             <div>
-              <p className="eyebrow"><span /> Work with me</p>
-              <h2>Good projects usually start with a good conversation.</h2>
+              <p className="ds-page-kicker">Work with me</p>
+              <h1 className="ds-page-title">Good work usually starts with a useful conversation.</h1>
             </div>
-            <p>
-              I am open to conversations about open source, writing, speaking,
-              community technology, and independent projects. Send me what you are
-              working on, what you are trying to solve, and why you think I may be useful.
+            <p className="ds-page-dek">
+              I&apos;m open to independent conversations where my experience,
+              writing, technical background, or community work can add something
+              real. Tell me what you&apos;re trying to do and why you reached out.
             </p>
-          </header>
-
-          <div className="project-list">
-            {waysToConnect.map((item) => (
-              <article className="project-item" key={item.name}>
-                <span className="project-number">{item.number}</span>
-                <div className="project-title">
-                  <span>{item.category}</span>
-                  <h3>{item.name}</h3>
-                </div>
-                <div className="project-summary">
-                  <p>{item.summary}</p>
-                  <small>Personal and independent capacity</small>
-                </div>
-                <a href="#contact" aria-label={`Ask David about ${item.name}`}><Arrow /></a>
-              </article>
-            ))}
           </div>
         </section>
 
-        <section className="principle-section">
-          <div className="principle-inner">
-            <p className="eyebrow">Clear boundaries</p>
-            <blockquote>
-              Personal projects stay separate from my employer, its systems, and its information.
-            </blockquote>
-            <div className="principle-list">
-              <span>Personal equipment and accounts</span>
-              <span>No employer confidential information or proprietary code</span>
-              <span>No employer endorsement or affiliation implied</span>
-              <span>Outside professional engagements require conflict review and any applicable approval before acceptance</span>
+        <section className="ds-section">
+          <div className="ds-shell">
+            <header className="ds-section-head">
+              <div>
+                <p className="ds-section-kicker">Where I can be useful</p>
+                <h2>A few good reasons to reach out.</h2>
+              </div>
+              <p>
+                This is deliberately broader than a consulting services page.
+                Sometimes the right outcome is a project. Sometimes it is an
+                interview, contribution, introduction, idea, or conversation.
+              </p>
+            </header>
+
+            <div className="ds-collab-list">
+              {waysToWork.map((item) => (
+                <article className="ds-collab-row" key={item.title}>
+                  <span>{item.number}</span>
+                  <h3>{item.title}</h3>
+                  <p>{item.copy}</p>
+                </article>
+              ))}
             </div>
+
+            <section className="ds-boundaries">
+              <p className="ds-page-kicker">Clear boundaries</p>
+              <h2>Personal work stays separate from employer work.</h2>
+              <p>
+                Anything discussed through this site is in my personal and
+                independent capacity. Employer systems, confidential information,
+                proprietary code, internal materials, and implied endorsements
+                are not part of the conversation.
+              </p>
+              <div className="ds-boundary-list">
+                <span>Personal equipment and accounts only</span>
+                <span>No employer confidential or proprietary information</span>
+                <span>No employer endorsement or affiliation implied</span>
+                <span>Outside-work approvals handled before any engagement begins</span>
+              </div>
+            </section>
           </div>
         </section>
 
-        <section className="contact-section" id="contact">
-          <div className="contact-copy">
-            <p className="eyebrow">Open channel</p>
-            <h2>Tell me what you have in mind.</h2>
-            <p>
-              A message is an invitation to talk, not an agreement to perform services.
-              If a proposed engagement requires outside-employment or conflict approval,
-              that approval must be handled before any work is accepted or begins.
-            </p>
-            <a className="discord-block" href="https://discord.gg/3phxzXBsAA" target="_blank" rel="noreferrer">
-              <span>Prefer a community conversation?</span>
-              <strong>Join my Discord</strong>
-              <small>discord.gg/3phxzXBsAA</small>
-              <Arrow />
-            </a>
-          </div>
+        <section className="ds-section ds-contact" id="contact">
+          <div className="ds-shell ds-contact-grid">
+            <div className="ds-contact-copy">
+              <p className="ds-section-kicker">Start here</p>
+              <h2>Tell me what you have in mind.</h2>
+              <p>
+                Useful context beats a formal pitch. What are you building,
+                writing, organizing, researching, or trying to solve? What would
+                you like from me?
+              </p>
+              <div className="ds-contact-links">
+                <Link href="/about">About me ↗</Link>
+                <a href="https://github.com/dschunk" target="_blank" rel="noreferrer">GitHub ↗</a>
+                <a href="https://www.linkedin.com/in/dschunk" target="_blank" rel="noreferrer">LinkedIn ↗</a>
+              </div>
+            </div>
 
-          <ContactForm
-            defaultSubject="Project or collaboration inquiry"
-            heading="Start a conversation"
-            description="Tell me what you are working on and what you need."
-            messagePlaceholder="What are you building, writing, organizing, or trying to solve? Include the useful context and what you would like from me."
-            idleMessage="I read every inquiry myself."
-          />
+            <ContactForm
+              defaultSubject="Project or collaboration inquiry"
+              heading="Start a conversation"
+              description="Give me enough context to understand the idea."
+              messagePlaceholder="What are you working on, what do you need, and where do you think I could help?"
+              idleMessage="A message is a conversation starter, not an agreement or commitment."
+            />
+          </div>
         </section>
       </main>
 
-      <footer className="site-footer">
-        <div className="content-width footer-inner">
-          <span>© 2026 David Schunk</span>
-          <span>Personal site · independent projects · no employer endorsement implied</span>
-          <Link href="/">Back to main site →</Link>
-        </div>
-      </footer>
+      <SiteFooter />
     </div>
   );
 }
