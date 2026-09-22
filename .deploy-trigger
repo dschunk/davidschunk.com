@@ -1,4 +1,5 @@
 davidschunk.com production deployment trigger
-2026-09-09T23:01:00-04:00
+2026-09-22T08:29:00-04:00
 source: main
-reason: publish Windows infrastructure lab and file-server field guide
+reason: publish complete 2026 editorial redesign of davidschunk.com
+commit: 068477d836fcf55f591201485e8e532c9ce531ba
