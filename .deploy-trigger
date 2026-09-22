@@ -1,5 +1,5 @@
 davidschunk.com production deployment trigger
-2026-09-22T08:52:00-04:00
+2026-09-22T08:58:00-04:00
 source: main
-reason: publish clean human-centered redesign and button contrast fix
-commit: bc97766d7b1b7d11f2317ae7309d04badf6e4b12
+reason: publish research page visual redesign to match current site
+commit: fb7a790d316469cf636c077a1213f68e348efb58
