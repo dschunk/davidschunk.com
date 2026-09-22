@@ -1,7 +1,7 @@
 import type { MetadataRoute } from "next";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const lastModified = new Date("2026-09-18T04:25:00-04:00");
+  const lastModified = new Date("2026-09-22T08:25:00-04:00");
 
   return [
     { url: "https://www.davidschunk.com/", lastModified, changeFrequency: "weekly", priority: 1 },

@@ -1,23 +1,27 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import "./rebrand.css";
 
 export const metadata: Metadata = {
-  title: "David Schunk — Infrastructure, Systems & Useful Work",
+  title: {
+    default: "David Schunk — Engineer, Writer, Builder",
+    template: "%s | David Schunk",
+  },
   description:
-    "David Schunk is an IT engineer and infrastructure builder focused on practical systems, automation, documentation, open-source tooling, and community.",
+    "The personal site of David Schunk: IT engineer, writer, builder, host of Voice of Adoptees, and founder of the Russian Adoptees Organization.",
   metadataBase: new URL("https://www.davidschunk.com"),
   openGraph: {
     type: "website",
-    title: "David Schunk — Infrastructure, Systems & Useful Work",
+    title: "David Schunk — Engineer, Writer, Builder",
     description:
-      "Infrastructure, automation, documentation, open-source tooling, practical IT writing, and useful systems built for the people who have to operate them.",
+      "Technology, practical writing, adoptee advocacy, community work, research, and independent projects.",
     siteName: "David Schunk",
   },
   twitter: {
     card: "summary",
-    title: "David Schunk — Infrastructure, Systems & Useful Work",
+    title: "David Schunk — Engineer, Writer, Builder",
     description:
-      "Infrastructure, automation, documentation, open-source tooling, and practical IT writing.",
+      "Technology, writing, adoptee advocacy, community work, research, and independent projects.",
   },
   icons: {
     icon: "/favicon.svg",
