@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import Link from "next/link";
+import { SiteFooter, SiteHeader } from "@/components/site-chrome";
 
 export const metadata: Metadata = {
   title: "Checks and Balances for Artificial Intelligence — David Schunk",
@@ -64,25 +64,13 @@ const Toc = () => (
 
 export default function AIGovernancePaper() {
   return (
-    <div className="mountain-site research-page">
-      <header className="mountain-header">
-        <Link className="mountain-brand" href="/" aria-label="David Schunk home">
-          <span className="research-mark">DS</span>
-          <span>David Schunk</span>
-        </Link>
-        <nav aria-label="Primary navigation">
-          <Link href="/#work">Work</Link>
-          <Link href="/#writing">Writing</Link>
-          <Link href="/about">About</Link>
-          <Link href="/#contact">Contact</Link>
-        </nav>
-        <Link className="mountain-header-action" href="/">Back Home</Link>
-      </header>
+    <div className="ds-site research-page">
+      <SiteHeader />
 
       <main>
         <section className="research-hero">
-          <div className="mountain-shell research-hero-inner">
-            <p className="mountain-section-label">Research Paper · AI Governance · September 18, 2026</p>
+          <div className="ds-shell research-hero-inner">
+            <p className="ds-eyebrow">Research Paper · AI Governance · September 18, 2026</p>
             <h1>Checks and Balances for Artificial Intelligence</h1>
             <p className="research-subtitle">
               A risk-tiered framework for safety, accountability, public trust, and innovation
@@ -108,7 +96,7 @@ export default function AIGovernancePaper() {
           </div>
         </section>
 
-        <div className="mountain-shell research-grid">
+        <div className="ds-shell research-grid">
           <Toc />
 
           <article className="research-prose">
@@ -703,18 +691,7 @@ export default function AIGovernancePaper() {
         </div>
       </main>
 
-      <footer className="mountain-footer research-footer">
-        <div className="mountain-shell mountain-footer-inner">
-          <div className="footer-brand"><div><strong>David Schunk</strong><small>Infrastructure. People. A brighter tomorrow.</small></div></div>
-          <nav aria-label="Footer navigation">
-            <Link href="/">Home</Link>
-            <a href="#abstract">Top</a>
-            <a href="#sources">Sources</a>
-            <Link href="/about">About</Link>
-          </nav>
-          <span className="footer-note">Independent research · September 2026</span>
-        </div>
-      </footer>
+      <SiteFooter />
     </div>
   );
 }
