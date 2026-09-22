@@ -5,40 +5,34 @@ import { ContactForm } from "@/components/contact-form";
 import { SiteFooter, SiteHeader } from "@/components/site-chrome";
 
 export const metadata: Metadata = {
-  title: "Work With Me",
+  title: "Contact & Collaboration",
   description:
-    "Independent collaboration, writing, speaking, open-source, podcast, community, and technology conversations with David Schunk.",
+    "Contact David Schunk about technology, writing, podcasts, open source, adoptee work, or independent projects.",
   alternates: { canonical: "/hire" },
   openGraph: {
     url: "https://www.davidschunk.com/hire",
-    title: "Work With David Schunk",
+    title: "Contact David Schunk",
     description:
-      "Independent collaboration, writing, speaking, open-source, podcast, community, and technology conversations.",
+      "Technology, writing, podcast, open-source, community, and independent-project conversations.",
   },
 };
 
-const Arrow = () => <span aria-hidden="true">↗</span>;
-
-const waysToWork = [
+const topics = [
   {
-    number: "01",
-    title: "Technical collaboration",
-    copy: "Open-source work, infrastructure thinking, practical tooling, documentation, reviews, troubleshooting approaches, and projects where operations experience is useful.",
+    title: "Technology",
+    copy: "Infrastructure, Windows, PowerShell, documentation, operations, open source, and technical projects.",
   },
   {
-    number: "02",
-    title: "Writing & research",
-    copy: "Articles, technical explainers, essays, research projects, editorial conversations, and work that benefits from making complicated subjects understandable.",
+    title: "Writing",
+    copy: "Articles, technical guides, research, editing, interviews, and ideas worth explaining clearly.",
   },
   {
-    number: "03",
     title: "Podcasts & speaking",
-    copy: "Conversations about IT, adoption, identity, community building, systems thinking, documentation, and the experience behind the work.",
+    copy: "IT, adoption, identity, community building, and conversations about the work behind the projects.",
   },
   {
-    number: "04",
     title: "Community projects",
-    copy: "Adoptee initiatives, nonprofit or volunteer technology, public-interest projects, resource development, and useful infrastructure for communities.",
+    copy: "Adoptee initiatives, nonprofit work, resource projects, and useful technology for communities.",
   },
 ];
 
@@ -51,35 +45,32 @@ export default function WorkWithMePage() {
         <section className="ds-page-hero">
           <div className="ds-shell ds-page-hero-grid">
             <div>
-              <p className="ds-page-kicker">Work with me</p>
-              <h1 className="ds-page-title">Good work usually starts with a useful conversation.</h1>
+              <p className="ds-eyebrow">Contact & collaboration</p>
+              <h1 className="ds-page-title">Want to talk about something?</h1>
             </div>
             <p className="ds-page-dek">
-              I&apos;m open to independent conversations where my experience,
-              writing, technical background, or community work can add something
-              real. Tell me what you&apos;re trying to do and why you reached out.
+              Send me the context and what you have in mind. It does not need to
+              sound like a formal pitch.
             </p>
           </div>
         </section>
 
         <section className="ds-section">
           <div className="ds-shell">
-            <header className="ds-section-head">
+            <div className="ds-section-title">
               <div>
-                <p className="ds-section-kicker">Where I can be useful</p>
-                <h2>A few good reasons to reach out.</h2>
+                <p className="ds-eyebrow">Good reasons to reach out</p>
+                <h2>These are usually the conversations I&apos;m interested in.</h2>
               </div>
               <p>
-                This is deliberately broader than a consulting services page.
-                Sometimes the right outcome is a project. Sometimes it is an
-                interview, contribution, introduction, idea, or conversation.
+                I keep this deliberately broad. Sometimes something turns into a
+                project. Sometimes it is just a useful conversation.
               </p>
-            </header>
+            </div>
 
             <div className="ds-collab-list">
-              {waysToWork.map((item) => (
+              {topics.map((item) => (
                 <article className="ds-collab-row" key={item.title}>
-                  <span>{item.number}</span>
                   <h3>{item.title}</h3>
                   <p>{item.copy}</p>
                 </article>
@@ -87,47 +78,45 @@ export default function WorkWithMePage() {
             </div>
 
             <section className="ds-boundaries">
-              <p className="ds-page-kicker">Clear boundaries</p>
-              <h2>Personal work stays separate from employer work.</h2>
+              <p className="ds-eyebrow">One important note</p>
+              <h2>Personal projects stay separate from my employer.</h2>
               <p>
-                Anything discussed through this site is in my personal and
-                independent capacity. Employer systems, confidential information,
-                proprietary code, internal materials, and implied endorsements
-                are not part of the conversation.
+                Anything discussed through this site is in my personal capacity.
+                I do not use employer confidential information, internal systems,
+                proprietary code, or employer resources for independent work.
               </p>
               <div className="ds-boundary-list">
-                <span>Personal equipment and accounts only</span>
-                <span>No employer confidential or proprietary information</span>
-                <span>No employer endorsement or affiliation implied</span>
-                <span>Outside-work approvals handled before any engagement begins</span>
+                <span>Personal equipment and accounts</span>
+                <span>No employer confidential information</span>
+                <span>No employer endorsement implied</span>
+                <span>Any required outside-work approval comes first</span>
               </div>
             </section>
           </div>
         </section>
 
-        <section className="ds-section ds-contact" id="contact">
+        <section className="ds-section ds-contact-section" id="contact">
           <div className="ds-shell ds-contact-grid">
             <div className="ds-contact-copy">
-              <p className="ds-section-kicker">Start here</p>
-              <h2>Tell me what you have in mind.</h2>
+              <p className="ds-eyebrow">Send a message</p>
+              <h2>Tell me what you&apos;re thinking.</h2>
               <p>
-                Useful context beats a formal pitch. What are you building,
-                writing, organizing, researching, or trying to solve? What would
-                you like from me?
+                A few useful details are enough: what you are working on, what
+                you need, and why you thought of me.
               </p>
               <div className="ds-contact-links">
-                <Link href="/about">About me ↗</Link>
-                <a href="https://github.com/dschunk" target="_blank" rel="noreferrer">GitHub ↗</a>
-                <a href="https://www.linkedin.com/in/dschunk" target="_blank" rel="noreferrer">LinkedIn ↗</a>
+                <Link href="/about">About me</Link>
+                <a href="https://github.com/dschunk" target="_blank" rel="noreferrer">GitHub</a>
+                <a href="https://www.linkedin.com/in/dschunk" target="_blank" rel="noreferrer">LinkedIn</a>
               </div>
             </div>
 
             <ContactForm
               defaultSubject="Project or collaboration inquiry"
-              heading="Start a conversation"
-              description="Give me enough context to understand the idea."
-              messagePlaceholder="What are you working on, what do you need, and where do you think I could help?"
-              idleMessage="A message is a conversation starter, not an agreement or commitment."
+              heading="Send me a message"
+              description="It goes directly to me."
+              messagePlaceholder="What are you working on, and what would you like to talk about?"
+              idleMessage="I read every inquiry myself."
             />
           </div>
         </section>
