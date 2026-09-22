@@ -1,5 +1,5 @@
 davidschunk.com production deployment trigger
-2026-09-22T08:58:00-04:00
+2026-09-22T14:15:00-04:00
 source: main
-reason: publish research page visual redesign to match current site
-commit: fb7a790d316469cf636c077a1213f68e348efb58
+reason: publish U.S.-Russia foreign policy paper and feature it on the homepage
+commit: 2b87e07fdf467e7f5641974dd7b66439a38d8564
