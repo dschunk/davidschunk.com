@@ -1,114 +1,192 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import Link from "next/link";
 
+import { SiteFooter, SiteHeader } from "@/components/site-chrome";
+
 export const metadata: Metadata = {
-  title: "About David Schunk — IT Engineer, Builder & Writer",
+  title: "About",
   description:
-    "About David Schunk: IT engineer, infrastructure builder, practical technology writer, and host of Voice of Adoptees.",
+    "About David Schunk: IT engineer, writer, builder, Russian adoptee, host of Voice of Adoptees, and founder of the Russian Adoptees Organization.",
   alternates: { canonical: "/about" },
   openGraph: {
     url: "https://www.davidschunk.com/about",
-    title: "About David Schunk — IT Engineer, Builder & Writer",
+    title: "About David Schunk",
     description:
-      "IT engineer, infrastructure builder, practical technology writer, and host of Voice of Adoptees.",
+      "IT engineer, writer, builder, Russian adoptee, podcast host, and community organizer.",
   },
 };
 
-const Arrow = () => (
-  <svg aria-hidden="true" viewBox="0 0 20 20" width="20" height="20">
-    <path d="M3 10h13M11 5l5 5-5 5" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
-  </svg>
-);
+const Arrow = () => <span aria-hidden="true">↗</span>;
+
+const facts = [
+  ["Born", "Smolensk, Russia"],
+  ["Raised", "New Hampshire"],
+  ["Education", "Champlain College · 2017"],
+  ["Profession", "IT engineering"],
+  ["Publication", "Everyday IT Tips"],
+  ["Podcast", "Voice of Adoptees"],
+];
 
 export default function AboutPage() {
   return (
-    <div className="mountain-site">
-      <header className="mountain-header">
-        <Link className="mountain-brand" href="/" aria-label="David Schunk home">
-          <Image src="/mountain-mark.svg" alt="" width={46} height={30} unoptimized />
-          <span>David Schunk</span>
-        </Link>
-        <nav aria-label="Primary navigation">
-          <Link href="/#work">Work</Link>
-          <Link href="/#writing">Writing</Link>
-          <Link href="/about">About</Link>
-          <Link href="/#contact">Contact</Link>
-        </nav>
-        <Link className="mountain-header-action" href="/hire">Work With Me <Arrow /></Link>
-      </header>
+    <div className="ds-site">
+      <SiteHeader />
 
       <main>
-        <section className="about-page-section mountain-shell">
-          <div className="about-page-grid">
-            <aside className="about-portrait-panel">
-              <Image
-                src="/david-schunk-portrait.svg"
-                alt="Portrait of David Schunk"
-                width={300}
-                height={300}
-                className="about-portrait"
-                unoptimized
-                priority
-              />
-              <p>David Schunk · IT Engineer · New Hampshire</p>
-              <div className="about-facts" aria-label="Quick facts">
-                <span><small>Focus</small><strong>Infrastructure & operations</strong></span>
-                <span><small>Writing</small><strong>Everyday IT Tips</strong></span>
-                <span><small>Community</small><strong>Voice of Adoptees</strong></span>
+        <section className="ds-page-hero">
+          <div className="ds-shell ds-page-hero-grid">
+            <div>
+              <p className="ds-page-kicker">About David</p>
+              <h1 className="ds-page-title">More than one story can be true at the same time.</h1>
+            </div>
+            <p className="ds-page-dek">
+              I&apos;m an IT engineer, writer, builder, Russian adoptee, and
+              community organizer. Technology is the profession. Curiosity is
+              the constant. The rest is a life that refuses to fit into one box.
+            </p>
+          </div>
+        </section>
+
+        <section className="ds-section">
+          <div className="ds-shell ds-about-layout">
+            <aside className="ds-about-rail" aria-label="Quick facts">
+              {facts.map(([label, value]) => (
+                <div className="ds-about-fact" key={label}>
+                  <small>{label}</small>
+                  <strong>{value}</strong>
+                </div>
+              ))}
+
+              <div className="ds-about-rail-links">
+                <a href="https://github.com/dschunk" target="_blank" rel="noreferrer">GitHub <Arrow /></a>
+                <a href="https://www.linkedin.com/in/dschunk" target="_blank" rel="noreferrer">LinkedIn <Arrow /></a>
+                <a href="https://meritpages.com/DavidSchunk" target="_blank" rel="noreferrer">Merit <Arrow /></a>
               </div>
             </aside>
 
-            <div className="about-copy">
-              <p className="mountain-section-label">About David</p>
-              <h1>Infrastructure, curiosity, and people.</h1>
-              <p className="about-lead">
-                I&apos;m David Schunk, an IT Engineer and Champlain College Class of 2017 graduate with a background in enterprise infrastructure, systems administration, networking, virtualization, cloud technologies, and cybersecurity.
-              </p>
-              <p>
-                I was born in Smolensk, Russia, adopted as a child, and raised in New Hampshire. Technology became the through-line: first as a student, then as a career, and eventually as a way to build useful systems, document what I learn, and make complicated things easier for the next person to understand.
-              </p>
-              <p>
-                Outside of day-to-day IT work, I publish Everyday IT Tips, maintain a hands-on infrastructure lab, build independent technology projects, and host Voice of Adoptees. I&apos;m especially interested in systems that are reliable, recoverable, well documented, and built with the people who operate them in mind.
-              </p>
-
-              <div className="mountain-actions about-actions">
-                <a className="mountain-button mountain-button-primary" href="https://meritpages.com/DavidSchunk" target="_blank" rel="noreferrer">Merit Profile <Arrow /></a>
-                <a className="mountain-button mountain-button-ghost" href="https://github.com/dschunk" target="_blank" rel="noreferrer">GitHub <Arrow /></a>
-                <a className="mountain-button mountain-button-ghost" href="https://everydayittips.com" target="_blank" rel="noreferrer">Everyday IT Tips <Arrow /></a>
-              </div>
-
-              <section className="about-record">
-                <p className="mountain-section-label">Academic & career record</p>
-                <h2>A profile that started at Champlain and kept going.</h2>
-                <p>
-                  My Merit page includes Champlain College-verified academic recognition from 2014 along with the work experience, projects, and publications I&apos;ve added since graduating.
+            <div className="ds-about-prose">
+              <section className="ds-about-chapter">
+                <p className="ds-about-lead">
+                  I was born in Smolensk, Russia in 1994, adopted as a child,
+                  and raised in New Hampshire. That origin story matters to me,
+                  but it is not the only thing that explains who I became.
                 </p>
-                <a href="https://meritpages.com/DavidSchunk" target="_blank" rel="noreferrer">
-                  View my Merit page <Arrow />
-                </a>
+                <p>
+                  I grew up curious about how things worked. Computers turned
+                  that curiosity into a profession: first troubleshooting,
+                  then systems administration, then infrastructure, automation,
+                  identity, virtualization, cloud platforms, security, and the
+                  operational discipline required to keep real environments running.
+                </p>
+                <p>
+                  I graduated from Champlain College in 2017 and built my career
+                  around enterprise IT. The part I enjoy most is not simply
+                  making a system work. It is making the system understandable:
+                  documented, recoverable, maintainable, and less dependent on
+                  tribal knowledge.
+                </p>
+              </section>
+
+              <section className="ds-about-chapter">
+                <p className="ds-section-kicker">Technology</p>
+                <h2>Good infrastructure should survive the person who built it.</h2>
+                <p>
+                  That principle drives most of my technical work. I build and
+                  manage Windows infrastructure, Active Directory, Microsoft
+                  365, virtualization, networking, monitoring, backup and
+                  recovery, endpoint systems, automation, and the documentation
+                  that connects all of those pieces.
+                </p>
+                <p>
+                  Outside of work, I maintain a hands-on infrastructure lab and
+                  publish tools and field guides. Everyday IT Tips grew from a
+                  simple belief: a useful technical answer should be clear enough
+                  to follow under pressure and complete enough to be worth
+                  bookmarking.
+                </p>
+                <div className="ds-actions">
+                  <a className="ds-button ds-button-primary" href="https://everydayittips.com" target="_blank" rel="noreferrer">
+                    Everyday IT Tips <Arrow />
+                  </a>
+                  <a className="ds-button ds-button-secondary" href="https://github.com/dschunk" target="_blank" rel="noreferrer">
+                    GitHub <Arrow />
+                  </a>
+                </div>
+              </section>
+
+              <section className="ds-about-chapter">
+                <p className="ds-section-kicker">Adoption</p>
+                <h2>Eventually, my personal history became public work.</h2>
+                <p>
+                  Being adopted from Russia gave me questions that did not have
+                  tidy answers: about identity, culture, citizenship, family,
+                  belonging, and what happens when other people tell an
+                  adoptee&apos;s story before the adoptee gets to tell it themselves.
+                </p>
+                <p>
+                  Voice of Adoptees became a place for those first-person stories.
+                  The goal has never been to make every adoptee agree. It is to
+                  make room for the complexity—to let people speak from their own
+                  lives without forcing those lives into somebody else&apos;s narrative.
+                </p>
+                <p>
+                  I later founded the Russian Adoptees Organization to give
+                  adoptees from Russia and the former Soviet Union a more durable
+                  community home: a place for connection, resources, institutional
+                  memory, and public-facing work built by adoptees themselves.
+                </p>
+                <div className="ds-actions">
+                  <a className="ds-button ds-button-primary" href="https://voiceofadoptees.com" target="_blank" rel="noreferrer">
+                    Voice of Adoptees <Arrow />
+                  </a>
+                  <a className="ds-button ds-button-secondary" href="https://russianadoptees.com" target="_blank" rel="noreferrer">
+                    Russian Adoptees <Arrow />
+                  </a>
+                </div>
+              </section>
+
+              <section className="ds-about-chapter">
+                <p className="ds-section-kicker">Writing & building</p>
+                <h2>I tend to respond to a missing thing by building it.</h2>
+                <p>
+                  Sometimes that means a PowerShell utility. Sometimes it means
+                  a website, a research paper, a community platform, a podcast,
+                  a lab environment, or a guide that answers the question I wish
+                  somebody had answered more clearly.
+                </p>
+                <p>
+                  This personal site is meant to reflect that whole picture.
+                  I do not want a professional portfolio that edits out the human
+                  parts, or a personal biography that pretends the technical work
+                  is incidental. Both are real. Both shape how I think.
+                </p>
+              </section>
+
+              <section className="ds-about-chapter">
+                <p className="ds-section-kicker">Today</p>
+                <h2>Keep learning. Keep documenting. Keep making useful things.</h2>
+                <p>
+                  I live in New Hampshire and continue to work in IT while
+                  publishing, building independent projects, interviewing
+                  adoptees, and developing community resources. I am interested
+                  in systems—technical and human—and in what makes them more
+                  resilient, understandable, and useful.
+                </p>
+                <div className="ds-actions">
+                  <Link className="ds-button ds-button-primary" href="/#work">
+                    See selected work <Arrow />
+                  </Link>
+                  <Link className="ds-button ds-button-secondary" href="/#contact">
+                    Get in touch <Arrow />
+                  </Link>
+                </div>
               </section>
             </div>
           </div>
         </section>
       </main>
 
-      <footer className="mountain-footer">
-        <div className="mountain-shell mountain-footer-inner">
-          <div className="footer-brand">
-            <Image src="/mountain-mark.svg" alt="" width={42} height={28} unoptimized />
-            <div><strong>David Schunk</strong><small>Infrastructure. People. A brighter tomorrow.</small></div>
-          </div>
-          <nav aria-label="Footer navigation">
-            <Link href="/#work">Work</Link>
-            <Link href="/#writing">Writing</Link>
-            <Link href="/about">About</Link>
-            <a href="https://meritpages.com/DavidSchunk" target="_blank" rel="noreferrer">Merit</a>
-            <Link href="/#contact">Contact</Link>
-          </nav>
-          <span className="footer-note">Same systems. Higher places.</span>
-        </div>
-      </footer>
+      <SiteFooter />
     </div>
   );
 }
