@@ -6,23 +6,37 @@ The source for [davidschunk.com](https://www.davidschunk.com/) — David Schunk'
 
 ## What this site is
 
-A straightforward personal website that brings together:
+A personal publishing and portfolio site bringing together:
 
 - IT engineering and infrastructure work
 - Everyday IT Tips and technical writing
 - Voice of Adoptees
 - the Russian Adoptees Organization
-- research and independent projects
+- independent research and publications
 - David's personal background and contact information
 
-The current design intentionally avoids portfolio gimmicks and oversized editorial styling. It uses system typography, simple spacing, light neutral backgrounds, restrained green accents, readable cards, and conventional navigation.
+## Design system
+
+The current identity uses an executive editorial direction rather than a conventional portfolio or SaaS layout:
+
+- deep navy mastheads and publication surfaces
+- warm ivory paper backgrounds
+- restrained gold rules and details
+- burgundy accents
+- serif display typography paired with clean system sans-serif text
+- square edges, formal rules, numbered project treatments, and strong hierarchy
+- David's existing portrait as a primary visual anchor
+- responsive layouts with reduced-motion support
+
+The goal is authoritative and personal without imitating an official government identity or using government seals.
 
 ## Main routes
 
-- `/` — homepage, selected work, writing, adoptee projects, and contact
+- `/` — homepage, selected work, publications, community projects, and contact
 - `/about` — personal background and biography
 - `/hire` — contact and collaboration information
 - `/research/ai-governance` — AI governance research paper
+- `/research/russia-policy` — U.S.–Russia foreign-policy paper
 - `/api/contact` — contact-form delivery endpoint
 
 ## Stack
@@ -69,7 +83,7 @@ app/
   page.tsx
   about/page.tsx
   hire/page.tsx
-  research/ai-governance/
+  research/
   globals.css
   rebrand.css
 
