@@ -18,21 +18,23 @@ A personal publishing and project hub bringing together:
 
 ## Design system
 
-The current identity is a clean-slate, bright editorial system built to be visually distinct from David's other sites:
+The current identity is intentionally restrained and content-first:
 
-- warm white and soft-stone surfaces
-- black typography with cobalt blue and acid-lime accents
-- oversized Manrope typography with high readability
-- a single-column typographic hero instead of split-screen cards
-- full-width project index rows instead of repeated portfolio cards
-- a cobalt writing stage, large narrative sections, and flat contact form
-- deliberate hard rules and spacing inspired by modern editorial / Swiss layouts
-- no mountain graphics, executive navy/gold styling, terminal UI, glass cards, or RAO-style hero composition
-- responsive layouts with reduced-motion support
+- white and warm off-white surfaces
+- black and gray typography
+- native system font stack for crisp rendering
+- no gradients, decorative illustrations, accent-color blocks, glass UI, or large visual gimmicks
+- simple editorial spacing and thin rules
+- plain project and writing lists instead of card-heavy layouts
+- a quiet header and footer
+- flat, minimal contact forms
+- consistent monochrome styling across homepage, About, Contact, and research pages
+
+The goal is clarity, readability, and longevity rather than visual novelty.
 
 ## Main routes
 
-- `/` — homepage, work, writing, story, adoptee projects, and contact
+- `/` — homepage, work, writing, about, and contact
 - `/about` — personal background and biography
 - `/hire` — contact and collaboration information
 - `/research/ai-governance` — AI governance research paper
@@ -59,40 +61,5 @@ Pull requests and pushes to `main` run:
 4. rendered HTML test
 5. UI component tests
 6. Wrangler deployment dry run
-
-## Develop locally
-
-Node.js 22.13 or newer is required.
-
-```bash
-npm ci
-npm run dev
-```
-
-Create a production build with:
-
-```bash
-npm run build
-```
-
-## Structure
-
-```text
-app/
-  layout.tsx
-  page.tsx
-  about/page.tsx
-  hire/page.tsx
-  research/
-  globals.css
-  rebrand.css
-
-components/
-  site-chrome.tsx
-  contact-form.tsx
-
-worker/
-  index.ts
-```
 
 © 2026 David Schunk
