@@ -12,8 +12,11 @@ export function SiteHeader() {
     <header className="ds-header">
       <div className="ds-shell ds-header-inner">
         <Link className="ds-brand" href="/" aria-label="David Schunk home">
-          <img src="/mountain-mark.svg" alt="" />
-          <span>David Schunk</span>
+          <span className="ds-brand-mark">DS</span>
+          <span className="ds-brand-copy">
+            <strong>David Schunk</strong>
+            <small>IT Engineer · Writer</small>
+          </span>
         </Link>
 
         <nav className="ds-nav" aria-label="Primary navigation">
@@ -22,7 +25,7 @@ export function SiteHeader() {
           ))}
         </nav>
 
-        <Link className="ds-header-contact" href="/#contact">Contact me</Link>
+        <Link className="ds-header-contact" href="/#contact">Say hello</Link>
       </div>
     </header>
   );
@@ -32,11 +35,11 @@ export function SiteFooter() {
   return (
     <footer className="ds-footer">
       <div className="ds-shell ds-footer-main">
-        <div className="ds-footer-identity">
-          <img src="/mountain-mark.svg" alt="" />
+        <div className="ds-footer-id">
+          <span className="ds-brand-mark ds-brand-mark-footer">DS</span>
           <div>
             <strong>David Schunk</strong>
-            <p>IT engineer, writer, podcaster, and community builder in New Hampshire.</p>
+            <p>Infrastructure, writing, open source, and adoptee-led projects.</p>
           </div>
         </div>
 
@@ -57,7 +60,7 @@ export function SiteFooter() {
 
       <div className="ds-shell ds-footer-bottom">
         <span>© 2026 David Schunk</span>
-        <span>New Hampshire, USA</span>
+        <span>New Hampshire · United States</span>
       </div>
     </footer>
   );
