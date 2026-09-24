@@ -30,59 +30,52 @@ export default function WorkWithMePage() {
       <SiteHeader />
 
       <main>
-        <section className="ds-subhero ds-subhero-contact">
+        <section className="ds-subpage-intro">
           <div className="ds-shell">
-            <span className="ds-subhero-index">Contact / 01</span>
+            <p className="ds-overline">Contact</p>
             <h1>Let&apos;s talk.</h1>
             <p>
-              You do not need a polished pitch. Tell me what you are working on,
-              what you need, and why you thought of me.
+              You do not need a formal pitch. A little context about what you are
+              working on and why you reached out is enough.
             </p>
           </div>
         </section>
 
         <section className="ds-topic-section">
           <div className="ds-shell">
-            <div className="ds-section-topline">
-              <span>Good reasons to reach out</span>
-              <p>I keep this deliberately broad.</p>
-            </div>
-
             <div className="ds-topic-list">
-              {topics.map(([title, copy], index) => (
+              {topics.map(([title, copy]) => (
                 <div className="ds-topic-row" key={title}>
-                  <span>{String(index + 1).padStart(2, "0")}</span>
                   <h2>{title}</h2>
                   <p>{copy}</p>
                 </div>
               ))}
             </div>
-          </div>
-        </section>
 
-        <section className="ds-personal-note">
-          <div className="ds-shell ds-personal-note-grid">
-            <span>Personal capacity</span>
-            <h2>My independent work stays separate from my employer.</h2>
-            <p>
-              I do not use employer confidential information, internal systems,
-              proprietary code, customer data, credentials, or employer resources
-              for personal projects. Any required outside-work approval comes first.
-            </p>
-          </div>
-        </section>
-
-        <section className="ds-contact-stage" id="contact">
-          <div className="ds-shell ds-contact-layout">
-            <div className="ds-contact-lead">
-              <span>Send a message</span>
-              <h2>HELLO.</h2>
+            <div className="ds-personal-note">
+              <strong>Personal capacity</strong>
               <p>
-                A few useful details are enough. If there is a fit, we can figure
-                out the rest from there.
+                My independent work stays separate from my employer. I do not use
+                employer confidential information, internal systems, proprietary
+                code, customer data, credentials, or employer resources for personal work.
               </p>
-              <div className="ds-social-line">
-                <Link href="/about">About me →</Link>
+            </div>
+          </div>
+        </section>
+
+        <section className="ds-plain-section ds-section-alt" id="contact">
+          <div className="ds-shell ds-contact-layout">
+            <div className="ds-contact-copy">
+              <div className="ds-section-heading">
+                <span>Send a message</span>
+                <h2>Hello.</h2>
+              </div>
+              <p>
+                Technology, writing, podcasts, open source, adoptee work, research,
+                or an independent project.
+              </p>
+              <div className="ds-home-links">
+                <Link href="/about">About me</Link>
                 <a href="https://github.com/dschunk" target="_blank" rel="noreferrer">GitHub ↗</a>
                 <a href="https://www.linkedin.com/in/dschunk" target="_blank" rel="noreferrer">LinkedIn ↗</a>
               </div>
@@ -92,7 +85,7 @@ export default function WorkWithMePage() {
               defaultSubject="Project or collaboration inquiry"
               heading="Send a message"
               description="It goes directly to me."
-              messagePlaceholder="What are you working on, and what would you like to talk about?"
+              messagePlaceholder="What are you working on?"
               idleMessage="I read every inquiry myself."
             />
           </div>
