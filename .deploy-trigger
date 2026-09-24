@@ -1,5 +1,5 @@
 davidschunk.com production deployment trigger
-2026-09-22T20:08:00-04:00
+2026-09-23T23:53:00-04:00
 source: main
-reason: deploy executive editorial redesign across homepage, shared chrome, and interior-page theme
-design-head: 499cc03679490c2a2c7378f77ba1a343e21f47d2
+reason: deploy completely new sleek personal-site redesign inspired by RussianAdoptees.com design discipline
+design-head: 654cb0317cd0d562f1516e945c5588a41dd9e384
