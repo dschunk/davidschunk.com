@@ -18,23 +18,21 @@ A personal publishing and project hub bringing together:
 
 ## Design system
 
-The current site uses a completely new modern personal identity built around:
+The current identity is a clean-slate, bright editorial system built to be visually distinct from David's other sites:
 
-- deep ink surfaces with warm-white content areas
-- electric teal as the primary signature accent
-- restrained violet, coral, and blue secondary accents
-- DM Sans typography with large, sharp, readable type
-- asymmetric layouts and strong visual hierarchy
-- soft 20–26px radii and restrained depth rather than glass-heavy UI
-- a purpose-built “Current desk” hero panel instead of generic portfolio cards
-- distinct project, writing, technology, adoptee, profile, and contact experiences
+- warm white and soft-stone surfaces
+- black typography with cobalt blue and acid-lime accents
+- oversized Manrope typography with high readability
+- a single-column typographic hero instead of split-screen cards
+- full-width project index rows instead of repeated portfolio cards
+- a cobalt writing stage, large narrative sections, and flat contact form
+- deliberate hard rules and spacing inspired by modern editorial / Swiss layouts
+- no mountain graphics, executive navy/gold styling, terminal UI, glass cards, or RAO-style hero composition
 - responsive layouts with reduced-motion support
-
-The design takes cues from the discipline and polish of RussianAdoptees.com—clear hierarchy, intentional spacing, strong contrast, and coherent sections—without reusing its visual identity.
 
 ## Main routes
 
-- `/` — homepage, work, writing, adoptee projects, profile, and contact
+- `/` — homepage, work, writing, story, adoptee projects, and contact
 - `/about` — personal background and biography
 - `/hire` — contact and collaboration information
 - `/research/ai-governance` — AI governance research paper
