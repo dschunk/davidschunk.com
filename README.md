@@ -6,10 +6,11 @@ The source for [davidschunk.com](https://www.davidschunk.com/) — David Schunk'
 
 ## What this site is
 
-A personal publishing and portfolio site bringing together:
+A personal publishing and project hub bringing together:
 
 - IT engineering and infrastructure work
 - Everyday IT Tips and technical writing
+- open-source Windows and PowerShell tools
 - Voice of Adoptees
 - the Russian Adoptees Organization
 - independent research and publications
@@ -17,22 +18,23 @@ A personal publishing and portfolio site bringing together:
 
 ## Design system
 
-The current identity uses an executive editorial direction rather than a conventional portfolio or SaaS layout:
+The current site uses a completely new modern personal identity built around:
 
-- deep navy mastheads and publication surfaces
-- warm ivory paper backgrounds
-- restrained gold rules and details
-- burgundy accents
-- serif display typography paired with clean system sans-serif text
-- square edges, formal rules, numbered project treatments, and strong hierarchy
-- David's existing portrait as a primary visual anchor
+- deep ink surfaces with warm-white content areas
+- electric teal as the primary signature accent
+- restrained violet, coral, and blue secondary accents
+- DM Sans typography with large, sharp, readable type
+- asymmetric layouts and strong visual hierarchy
+- soft 20–26px radii and restrained depth rather than glass-heavy UI
+- a purpose-built “Current desk” hero panel instead of generic portfolio cards
+- distinct project, writing, technology, adoptee, profile, and contact experiences
 - responsive layouts with reduced-motion support
 
-The goal is authoritative and personal without imitating an official government identity or using government seals.
+The design takes cues from the discipline and polish of RussianAdoptees.com—clear hierarchy, intentional spacing, strong contrast, and coherent sections—without reusing its visual identity.
 
 ## Main routes
 
-- `/` — homepage, selected work, publications, community projects, and contact
+- `/` — homepage, work, writing, adoptee projects, profile, and contact
 - `/about` — personal background and biography
 - `/hire` — contact and collaboration information
 - `/research/ai-governance` — AI governance research paper
