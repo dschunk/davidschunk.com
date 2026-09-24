@@ -4,24 +4,24 @@ import "./rebrand.css";
 
 export const metadata: Metadata = {
   title: {
-    default: "David Schunk | IT Engineer, Writer & Podcaster",
+    default: "David Schunk | IT Engineer, Writer & Builder",
     template: "%s | David Schunk",
   },
   description:
-    "David Schunk is an IT engineer in New Hampshire who writes about practical technology, hosts Voice of Adoptees, and builds independent projects.",
+    "David Schunk is an IT engineer in New Hampshire who writes about practical technology, builds open-source tools, hosts Voice of Adoptees, and creates independent projects.",
   metadataBase: new URL("https://www.davidschunk.com"),
   openGraph: {
     type: "website",
-    title: "David Schunk | IT Engineer, Writer & Podcaster",
+    title: "David Schunk | IT Engineer, Writer & Builder",
     description:
-      "IT, practical technology writing, Voice of Adoptees, community work, research, and independent projects.",
+      "Infrastructure, practical technology writing, open source, Voice of Adoptees, research, and independent projects.",
     siteName: "David Schunk",
   },
   twitter: {
     card: "summary",
-    title: "David Schunk | IT Engineer, Writer & Podcaster",
+    title: "David Schunk | IT Engineer, Writer & Builder",
     description:
-      "IT, technology writing, adoptee community work, research, and independent projects.",
+      "Infrastructure, technology writing, open source, adoptee community work, research, and independent projects.",
   },
   icons: {
     icon: "/favicon.svg",
