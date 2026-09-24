@@ -7,7 +7,7 @@ import { SiteFooter, SiteHeader } from "@/components/site-chrome";
 export const metadata: Metadata = {
   alternates: { canonical: "/" },
   description:
-    "David Schunk is an IT engineer in New Hampshire who writes practical technical guidance, builds open-source tools, and creates adoptee-led media and community projects.",
+    "David Schunk is an IT engineer in New Hampshire who writes about practical technology, builds useful tools, and creates adoptee-led media and community projects.",
   openGraph: { url: "https://www.davidschunk.com/" },
 };
 
@@ -15,33 +15,33 @@ const projects = [
   {
     number: "01",
     title: "Everyday IT Tips",
-    type: "Technical writing",
+    eyebrow: "Technical writing",
     description:
-      "Field-tested guides for Windows, infrastructure, troubleshooting, security, systems administration, and the problems that tend to appear at the worst possible time.",
+      "The guides I wish existed when something breaks at 3 A.M. Windows, infrastructure, PowerShell, troubleshooting, security, and real-world operations.",
     href: "https://everydayittips.com",
   },
   {
     number: "02",
     title: "Windows IT Toolkit",
-    type: "Open source",
+    eyebrow: "Open source",
     description:
-      "PowerShell tools for Windows administration, Active Directory, Group Policy, evidence collection, and the routine work that should be easier than it is.",
+      "PowerShell tools for Windows administration, Active Directory, Group Policy, evidence collection, and everyday systems work.",
     href: "https://github.com/dschunk/windows-it-toolkit",
   },
   {
     number: "03",
     title: "Voice of Adoptees",
-    type: "Independent media",
+    eyebrow: "Podcast",
     description:
-      "Long-form conversations with adoptees about identity, family, culture, reunion, belonging, loss, and the experiences that do not fit neatly into a slogan.",
+      "Long-form conversations where adoptees speak for themselves about identity, family, culture, reunion, belonging, and everything in between.",
     href: "https://voiceofadoptees.com",
   },
   {
     number: "04",
     title: "Russian Adoptees Organization",
-    type: "Community",
+    eyebrow: "Community",
     description:
-      "A public resource and community platform built by and for adoptees from Russia and the former Soviet Union.",
+      "A public home for adoptees from Russia and the former Soviet Union to connect, preserve knowledge, share resources, and build community.",
     href: "https://russianadoptees.com",
   },
 ];
@@ -61,18 +61,13 @@ const writing = [
   },
   {
     title: "Windows Server post-build checklist",
-    meta: "Windows Server · Guide",
+    meta: "Windows Server · Field guide",
     href: "https://everydayittips.com/guides/windows-server-post-build-checklist/",
   },
   {
     title: "Windows network troubleshooting toolkit",
-    meta: "Networking · Guide",
+    meta: "Networking · Field guide",
     href: "https://everydayittips.com/guides/windows-network-troubleshooting-toolkit/",
-  },
-  {
-    title: "PowerShell disk-space triage",
-    meta: "PowerShell · Guide",
-    href: "https://everydayittips.com/guides/powershell-disk-space-triage/",
   },
 ];
 
@@ -82,76 +77,76 @@ export default function Home() {
       <SiteHeader />
 
       <main>
-        <section className="ds-home-hero">
-          <div className="ds-shell">
-            <div className="ds-home-kicker">David Schunk · New Hampshire</div>
-
-            <div className="ds-home-hero-grid">
-              <div className="ds-home-intro">
-                <h1>IT engineer.<br />Writer.<br />Builder.</h1>
-                <p className="ds-home-lead">
-                  I run infrastructure, write the documentation I wish existed,
-                  build practical tools, and create independent projects around
-                  technology and the adoptee community.
-                </p>
-
-                <div className="ds-actions ds-actions-hero">
-                  <a className="ds-button ds-button-primary" href="#work">See what I build</a>
-                  <Link className="ds-button ds-button-secondary" href="/about">About me</Link>
-                </div>
+        <section className="ds-hero">
+          <div className="ds-hero-mountains" aria-hidden="true" />
+          <div className="ds-shell ds-hero-inner">
+            <div className="ds-hero-copy">
+              <p className="ds-overline">Born in Russia · Raised in New Hampshire</p>
+              <h1>David<br />Schunk</h1>
+              <p className="ds-hero-role">
+                IT engineer, writer, podcaster, and builder of useful things.
+              </p>
+              <p className="ds-hero-lead">
+                I work on infrastructure for a living. Outside of work, I write
+                practical technology guides, build open-source tools, run a
+                homelab, interview adoptees, and turn ideas into projects.
+              </p>
+              <div className="ds-hero-actions">
+                <a className="ds-button ds-button-light" href="#work">Explore my work</a>
+                <Link className="ds-text-link ds-text-link-light" href="/about">More about me →</Link>
               </div>
-
-              <aside className="ds-home-note" aria-label="At a glance">
-                <p>
-                  This is my personal corner of the internet. No corporate
-                  mission statement. No startup jargon. Just the work, the writing,
-                  the projects, and the things I care enough about to keep building.
-                </p>
-                <dl>
-                  <div><dt>Work</dt><dd>Infrastructure & systems</dd></div>
-                  <div><dt>Writing</dt><dd>Practical technology</dd></div>
-                  <div><dt>Community</dt><dd>Adoptee-led projects</dd></div>
-                </dl>
-              </aside>
             </div>
-          </div>
-        </section>
 
-        <section className="ds-status-strip">
-          <div className="ds-shell ds-status-grid">
-            <strong>Currently building</strong>
-            <p>Windows tools, technical guides, independent research, and community infrastructure.</p>
-            <div>
-              <a href="https://github.com/dschunk" target="_blank" rel="noreferrer">GitHub ↗</a>
-              <a href="https://www.linkedin.com/in/dschunk" target="_blank" rel="noreferrer">LinkedIn ↗</a>
-            </div>
-          </div>
-        </section>
-
-        <section className="ds-section" id="work">
-          <div className="ds-shell">
-            <header className="ds-section-head">
-              <div>
-                <p className="ds-eyebrow">Selected work</p>
-                <h2>Things I actually maintain.</h2>
+            <aside className="ds-hero-aside">
+              <div className="ds-hero-aside-mark">
+                <img src="/mountain-mark.svg" alt="" />
               </div>
               <p>
-                Projects that solve a problem, document something useful, or give
-                people a place to be heard.
+                <strong>New Hampshire is home.</strong>
+                The mountains, the seasons, and the habit of figuring things out
+                have become part of how I build.
+              </p>
+              <div className="ds-hero-aside-links">
+                <a href="https://github.com/dschunk" target="_blank" rel="noreferrer">GitHub ↗</a>
+                <a href="https://www.linkedin.com/in/dschunk" target="_blank" rel="noreferrer">LinkedIn ↗</a>
+                <a href="https://meritpages.com/DavidSchunk" target="_blank" rel="noreferrer">Merit ↗</a>
+              </div>
+            </aside>
+          </div>
+        </section>
+
+        <section className="ds-now">
+          <div className="ds-shell ds-now-inner">
+            <span className="ds-now-dot" aria-hidden="true" />
+            <strong>Right now</strong>
+            <p>Building Windows tools, writing field guides, maintaining community projects, and probably changing something in the homelab.</p>
+          </div>
+        </section>
+
+        <section className="ds-section ds-work" id="work">
+          <div className="ds-shell">
+            <header className="ds-section-heading">
+              <div>
+                <span className="ds-section-number">01</span>
+                <h2>The things I keep building.</h2>
+              </div>
+              <p>
+                Some of it is infrastructure. Some of it is writing. Some of it
+                started because I got tired of wishing somebody else would build it.
               </p>
             </header>
 
-            <div className="ds-project-list">
+            <div className="ds-work-grid">
               {projects.map((project) => (
-                <article className="ds-project-row" key={project.title}>
-                  <div className="ds-project-number">{project.number}</div>
-                  <div className="ds-project-main">
-                    <span className="ds-project-type">{project.type}</span>
+                <article className="ds-work-item" key={project.title}>
+                  <div className="ds-work-number">{project.number}</div>
+                  <div className="ds-work-copy">
+                    <span>{project.eyebrow}</span>
                     <h3>{project.title}</h3>
+                    <p>{project.description}</p>
                   </div>
-                  <p>{project.description}</p>
-                  <a href={project.href} target="_blank" rel="noreferrer" aria-label={`Open ${project.title}`}>
-                    Visit <span aria-hidden="true">↗</span>
+                  <a href={project.href} target="_blank" rel="noreferrer" aria-label={`Visit ${project.title}`}>
+                    Open <span aria-hidden="true">↗</span>
                   </a>
                 </article>
               ))}
@@ -159,97 +154,107 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="ds-publications" id="writing">
+        <section className="ds-writing" id="writing">
           <div className="ds-shell">
-            <header className="ds-section-head ds-section-head-light">
-              <div>
-                <p className="ds-eyebrow">Writing & research</p>
-                <h2>Read the work.</h2>
-              </div>
+            <header className="ds-writing-heading">
+              <span className="ds-section-number ds-section-number-light">02</span>
+              <h2>I write things down.</h2>
               <p>
-                Longer research, field notes, troubleshooting guides, and practical
-                technical writing.
+                Because good documentation is cheaper than rediscovering the same
+                answer six months later.
               </p>
             </header>
 
-            <div className="ds-writing-list">
-              {writing.map((item, index) => (
+            <div className="ds-writing-feature">
+              <div className="ds-writing-feature-copy">
+                <span>Featured research</span>
+                <h3>Checks and Balances for Artificial Intelligence</h3>
+                <p>
+                  A long-form framework for reducing public fear, preserving human
+                  control, and building practical accountability into AI governance.
+                </p>
+                <Link href="/research/ai-governance">Read the paper →</Link>
+              </div>
+              <div className="ds-writing-feature-art" aria-hidden="true">
+                <img src="/mountain-mark.svg" alt="" />
+                <span>Research / 2026</span>
+              </div>
+            </div>
+
+            <div className="ds-reading-list">
+              {writing.slice(1).map((item, index) => (
                 <article key={item.title}>
-                  <span className="ds-writing-index">{String(index + 1).padStart(2, "0")}</span>
+                  <span>{String(index + 2).padStart(2, "0")}</span>
                   <div>
-                    <span>{item.meta}</span>
+                    <small>{item.meta}</small>
                     <h3>{item.title}</h3>
                   </div>
                   {item.internal ? (
-                    <Link href={item.href}>Read <span aria-hidden="true">→</span></Link>
+                    <Link href={item.href}>Read →</Link>
                   ) : (
-                    <a href={item.href} target="_blank" rel="noreferrer">
-                      Read <span aria-hidden="true">↗</span>
-                    </a>
+                    <a href={item.href} target="_blank" rel="noreferrer">Read ↗</a>
                   )}
                 </article>
               ))}
             </div>
 
-            <div className="ds-section-link">
-              <a href="https://everydayittips.com" target="_blank" rel="noreferrer">
-                Browse all technical writing ↗
-              </a>
-            </div>
+            <a className="ds-writing-all" href="https://everydayittips.com" target="_blank" rel="noreferrer">
+              Browse Everyday IT Tips ↗
+            </a>
           </div>
         </section>
 
-        <section className="ds-section" id="adoption">
+        <section className="ds-section ds-community" id="adoption">
           <div className="ds-shell">
-            <header className="ds-section-head">
+            <header className="ds-section-heading">
               <div>
-                <p className="ds-eyebrow">Community & media</p>
-                <h2>Adoptee voices, in our own words.</h2>
+                <span className="ds-section-number">03</span>
+                <h2>Adoption is part of the story too.</h2>
               </div>
               <p>
                 I was born in Smolensk, Russia and adopted as a child. Years later,
-                that history grew into interviewing, organizing, publishing, and
-                building with other adoptees.
+                that history became conversations, advocacy, organizing, and a
+                community much bigger than me.
               </p>
             </header>
 
-            <div className="ds-community-list">
-              <article>
-                <span>Podcast</span>
-                <h3>Voice of Adoptees</h3>
+            <div className="ds-community-grid">
+              <article className="ds-community-primary">
+                <span>Voice of Adoptees</span>
+                <h3>More than 100 conversations. One simple idea: adoptees should speak for themselves.</h3>
                 <p>
-                  Long-form conversations about identity, family, culture, reunion,
-                  loss, belonging, and everything that refuses to fit into a simple
-                  adoption narrative.
+                  The podcast is a place for honest, long-form conversations about
+                  identity, family, culture, reunion, loss, belonging, and the parts
+                  of adoption that rarely fit into neat narratives.
                 </p>
-                <a href="https://voiceofadoptees.com" target="_blank" rel="noreferrer">Listen and explore ↗</a>
+                <a href="https://voiceofadoptees.com" target="_blank" rel="noreferrer">Visit Voice of Adoptees ↗</a>
               </article>
 
-              <article>
-                <span>Organization</span>
-                <h3>Russian Adoptees Organization</h3>
+              <article className="ds-community-secondary">
+                <span>Russian Adoptees Organization</span>
+                <h3>A permanent home for the community.</h3>
                 <p>
-                  A lasting public home where adoptees from Russia and the former
-                  Soviet Union can connect, preserve community knowledge, share
-                  resources, and speak for ourselves.
+                  Resources, connection, public advocacy, shared history, and an
+                  organization built around adoptee voices.
                 </p>
-                <a href="https://russianadoptees.com" target="_blank" rel="noreferrer">Visit the organization ↗</a>
+                <a href="https://russianadoptees.com" target="_blank" rel="noreferrer">Visit RussianAdoptees.com ↗</a>
               </article>
             </div>
           </div>
         </section>
 
-        <section className="ds-profile-band">
-          <div className="ds-shell ds-profile-band-grid">
-            <p className="ds-eyebrow">The short version</p>
-            <h2>Russia → New Hampshire → Champlain → a career in IT.</h2>
+        <section className="ds-story">
+          <div className="ds-shell ds-story-inner">
+            <div className="ds-story-mark"><img src="/mountain-mark.svg" alt="" /></div>
             <div>
+              <span className="ds-section-number">04</span>
+              <h2>Russia → New Hampshire → Champlain → IT.</h2>
               <p>
-                My career is in enterprise technology. The rest of this site is
-                what happens when I keep writing, tinkering, documenting, and
-                building after the workday ends.
+                Computers became a career. Writing became a habit. Adoption became
+                a community. This website is where all of those parts of my life
+                are allowed to exist in the same place.
               </p>
-              <Link href="/about">Read the full profile →</Link>
+              <Link href="/about">Read my story →</Link>
             </div>
           </div>
         </section>
@@ -257,22 +262,22 @@ export default function Home() {
         <section className="ds-section ds-contact-section" id="contact">
           <div className="ds-shell ds-contact-grid">
             <div className="ds-contact-copy">
-              <p className="ds-eyebrow">Contact</p>
-              <h2>Send me the useful details.</h2>
+              <span className="ds-section-number">05</span>
+              <h2>Say hello.</h2>
               <p>
                 Technology, writing, podcasting, adoptee work, open source,
-                research, or a project worth talking about.
+                research, or a project you think I should know about.
               </p>
               <div className="ds-contact-links">
-                <Link href="/hire">Collaboration details →</Link>
                 <a href="https://github.com/dschunk" target="_blank" rel="noreferrer">GitHub ↗</a>
                 <a href="https://www.linkedin.com/in/dschunk" target="_blank" rel="noreferrer">LinkedIn ↗</a>
+                <a href="https://discord.gg/3phxzXBsAA" target="_blank" rel="noreferrer">Discord ↗</a>
               </div>
             </div>
 
             <ContactForm
-              heading="Send a message"
-              description="Direct to me."
+              heading="Send me a message"
+              description="It goes directly to me."
               messagePlaceholder="What would you like to talk about?"
               idleMessage="I read every message myself."
             />
