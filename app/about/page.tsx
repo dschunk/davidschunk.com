@@ -16,13 +16,11 @@ export const metadata: Metadata = {
   },
 };
 
-const facts = [
-  ["Born", "Smolensk, Russia"],
-  ["Raised", "New Hampshire"],
-  ["College", "Champlain College, 2017"],
-  ["Work", "IT engineering"],
-  ["Writing", "Everyday IT Tips"],
-  ["Podcast", "Voice of Adoptees"],
+const timeline = [
+  ["1994", "Smolensk, Russia", "Born in Russia."],
+  ["1996", "New Hampshire", "Adopted and raised in New Hampshire."],
+  ["2017", "Champlain College", "Graduated and kept building a career in IT."],
+  ["Now", "Systems + words + people", "Infrastructure engineer, writer, podcaster, and community builder."],
 ];
 
 export default function AboutPage() {
@@ -31,128 +29,108 @@ export default function AboutPage() {
       <SiteHeader />
 
       <main>
-        <section className="ds-page-hero">
-          <div className="ds-shell ds-page-hero-grid">
-            <div>
-              <p className="ds-eyebrow">About</p>
-              <h1 className="ds-page-title">A little more about me.</h1>
-            </div>
-            <p className="ds-page-dek">
-              I&apos;m David Schunk. I work in IT, write about technology, host
-              Voice of Adoptees, and spend a lot of my free time building things.
+        <section className="ds-subhero">
+          <div className="ds-shell">
+            <span className="ds-subhero-index">About / 01</span>
+            <h1>More than a résumé.</h1>
+            <p>
+              The short version: I work in IT, build a lot of things on the internet,
+              write what I learn, and care deeply about adoptee voices and community.
             </p>
           </div>
         </section>
 
-        <section className="ds-section">
-          <div className="ds-shell ds-about-layout">
-            <aside className="ds-about-rail" aria-label="Quick facts">
-              {facts.map(([label, value]) => (
-                <div className="ds-about-fact" key={label}>
-                  <small>{label}</small>
-                  <strong>{value}</strong>
+        <section className="ds-about-opening">
+          <div className="ds-shell ds-about-opening-grid">
+            <p className="ds-about-opening-lead">
+              I was born in Smolensk, Russia in 1994, adopted as a child, and grew
+              up in New Hampshire. Technology eventually became my career. The
+              rest of this site grew around it.
+            </p>
+            <div className="ds-about-note">
+              <span>What I care about</span>
+              <strong>Useful systems. Clear writing. Honest conversations. Work that survives handoff.</strong>
+            </div>
+          </div>
+        </section>
+
+        <section className="ds-timeline-section">
+          <div className="ds-shell">
+            <div className="ds-section-topline">
+              <span>A few coordinates</span>
+              <p>Not the whole story. Just the useful map.</p>
+            </div>
+            <div className="ds-timeline">
+              {timeline.map(([year, title, copy]) => (
+                <div className="ds-timeline-row" key={year}>
+                  <span>{year}</span>
+                  <h2>{title}</h2>
+                  <p>{copy}</p>
                 </div>
               ))}
+            </div>
+          </div>
+        </section>
 
-              <div className="ds-about-rail-links">
+        <section className="ds-about-chapters">
+          <div className="ds-shell">
+            <article>
+              <span>01 / Work</span>
+              <h2>I like infrastructure that makes sense after the person who built it leaves.</h2>
+              <p>
+                My professional work has covered systems administration, Windows
+                Server, Active Directory, Group Policy, networking, virtualization,
+                cloud platforms, identity, security, and end-user operations.
+              </p>
+              <p>
+                The part I care about most is operational clarity: documentation,
+                recovery, maintainability, and making sure the environment is not
+                held together by one person&apos;s memory.
+              </p>
+            </article>
+
+            <article>
+              <span>02 / Build</span>
+              <h2>Side projects are where curiosity gets a budget of zero and a deadline of whenever.</h2>
+              <p>
+                I maintain a homelab, publish PowerShell tools, write practical IT
+                guides, build websites, experiment with infrastructure, and usually
+                have several projects competing for attention.
+              </p>
+              <div className="ds-text-actions">
+                <a href="https://everydayittips.com" target="_blank" rel="noreferrer">Everyday IT Tips ↗</a>
                 <a href="https://github.com/dschunk" target="_blank" rel="noreferrer">GitHub ↗</a>
-                <a href="https://www.linkedin.com/in/dschunk" target="_blank" rel="noreferrer">LinkedIn ↗</a>
-                <a href="https://meritpages.com/DavidSchunk" target="_blank" rel="noreferrer">Merit ↗</a>
               </div>
-            </aside>
+            </article>
 
-            <div className="ds-about-prose">
-              <section className="ds-about-chapter">
-                <p className="ds-about-lead">
-                  I was born in Smolensk, Russia in 1994, adopted as a child, and
-                  grew up in New Hampshire.
-                </p>
-                <p>
-                  Computers were an interest early on and eventually became my
-                  career. I graduated from Champlain College in 2017 and have
-                  spent my professional life working across systems administration,
-                  infrastructure, networking, virtualization, cloud platforms,
-                  identity, security, and end-user operations.
-                </p>
-                <p>
-                  What I like most about IT is making complicated environments
-                  easier to understand and operate. I care about documentation,
-                  recovery, maintainability, and leaving behind systems that do
-                  not depend on one person remembering how everything works.
-                </p>
-              </section>
+            <article>
+              <span>03 / Adoption</span>
+              <h2>My adoptee work started with my own questions and got much bigger than that.</h2>
+              <p>
+                Voice of Adoptees became a place for long-form conversations about
+                identity, family, culture, reunion, loss, belonging, and the parts
+                of adoption that do not fit into a simple narrative.
+              </p>
+              <p>
+                The Russian Adoptees Organization grew from the need for something
+                more permanent: community, resources, public records, and an
+                adoptee-led institution with a long memory.
+              </p>
+              <div className="ds-text-actions">
+                <a href="https://voiceofadoptees.com" target="_blank" rel="noreferrer">Voice of Adoptees ↗</a>
+                <a href="https://russianadoptees.com" target="_blank" rel="noreferrer">Russian Adoptees ↗</a>
+              </div>
+            </article>
+          </div>
+        </section>
 
-              <section className="ds-about-chapter">
-                <p className="ds-eyebrow">Outside work</p>
-                <h2>I build things because I enjoy building things.</h2>
-                <p>
-                  I maintain a homelab, write practical IT guides, publish
-                  PowerShell tools, build websites, experiment with new platforms,
-                  and generally have more side projects than I probably need.
-                </p>
-                <p>
-                  Everyday IT Tips is where most of my technical writing lives.
-                  It focuses on the kind of documentation I actually want when I
-                  am troubleshooting something: clear, specific, and useful.
-                </p>
-                <div className="ds-actions">
-                  <a className="ds-button ds-button-primary" href="https://everydayittips.com" target="_blank" rel="noreferrer">
-                    Everyday IT Tips
-                  </a>
-                  <a className="ds-button ds-button-secondary" href="https://github.com/dschunk" target="_blank" rel="noreferrer">
-                    GitHub
-                  </a>
-                </div>
-              </section>
-
-              <section className="ds-about-chapter">
-                <p className="ds-eyebrow">Adoption</p>
-                <h2>My adoptee work grew out of my own questions.</h2>
-                <p>
-                  Being adopted from Russia is a major part of my life and
-                  identity. Over time I became more involved in adoptee spaces,
-                  first by sharing my own experiences and later by interviewing
-                  other adoptees and helping build community.
-                </p>
-                <p>
-                  I created Voice of Adoptees so adoptees could speak for
-                  themselves about identity, family, culture, reunion, loss,
-                  belonging, and the parts of adoption that rarely fit into a
-                  simple narrative.
-                </p>
-                <p>
-                  I also founded the Russian Adoptees Organization to create a
-                  more permanent home for adoptees from Russia and the former
-                  Soviet Union to connect and share resources.
-                </p>
-                <div className="ds-actions">
-                  <a className="ds-button ds-button-primary" href="https://voiceofadoptees.com" target="_blank" rel="noreferrer">
-                    Voice of Adoptees
-                  </a>
-                  <a className="ds-button ds-button-secondary" href="https://russianadoptees.com" target="_blank" rel="noreferrer">
-                    Russian Adoptees Organization
-                  </a>
-                </div>
-              </section>
-
-              <section className="ds-about-chapter">
-                <p className="ds-eyebrow">Today</p>
-                <h2>I&apos;m still doing a little bit of all of it.</h2>
-                <p>
-                  I live in New Hampshire and work in IT while continuing to
-                  write, podcast, maintain my lab, build independent projects,
-                  and work with the adoptee community.
-                </p>
-                <p>
-                  This site is where those parts of my life meet. It is not meant
-                  to be a polished corporate bio. It is just a useful place to
-                  keep the work, writing, and projects I want to share.
-                </p>
-                <div className="ds-actions">
-                  <Link className="ds-button ds-button-primary" href="/#work">See my work</Link>
-                  <Link className="ds-button ds-button-secondary" href="/#contact">Contact me</Link>
-                </div>
-              </section>
+        <section className="ds-about-cta">
+          <div className="ds-shell">
+            <p>That&apos;s enough autobiography for one page.</p>
+            <h2>See what I&apos;m building now.</h2>
+            <div className="ds-inline-actions">
+              <Link href="/#work">Selected work →</Link>
+              <Link href="/#contact">Contact me →</Link>
             </div>
           </div>
         </section>
