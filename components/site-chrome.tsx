@@ -3,7 +3,7 @@ import Link from "next/link";
 const navItems = [
   { href: "/#work", label: "Work" },
   { href: "/#writing", label: "Writing" },
-  { href: "/#adoption", label: "Community" },
+  { href: "/#adoption", label: "Adoption" },
   { href: "/about", label: "About" },
 ];
 
@@ -12,8 +12,8 @@ export function SiteHeader() {
     <header className="ds-header">
       <div className="ds-shell ds-header-inner">
         <Link className="ds-brand" href="/" aria-label="David Schunk home">
-          <strong>David Schunk</strong>
-          <span>davidschunk.com</span>
+          <img src="/mountain-mark.svg" alt="" />
+          <span>David Schunk</span>
         </Link>
 
         <nav className="ds-nav" aria-label="Primary navigation">
@@ -22,7 +22,7 @@ export function SiteHeader() {
           ))}
         </nav>
 
-        <Link className="ds-header-contact" href="/#contact">Contact</Link>
+        <Link className="ds-header-contact" href="/#contact">Contact me</Link>
       </div>
     </header>
   );
@@ -33,20 +33,22 @@ export function SiteFooter() {
     <footer className="ds-footer">
       <div className="ds-shell ds-footer-main">
         <div className="ds-footer-identity">
-          <strong>David Schunk</strong>
-          <p>IT engineer, writer, podcaster, and community builder in New Hampshire.</p>
+          <img src="/mountain-mark.svg" alt="" />
+          <div>
+            <strong>David Schunk</strong>
+            <p>IT engineer, writer, podcaster, and community builder in New Hampshire.</p>
+          </div>
         </div>
 
         <nav aria-label="Footer navigation">
-          <span>Site</span>
           <Link href="/#work">Work</Link>
           <Link href="/#writing">Writing</Link>
+          <Link href="/#adoption">Adoption</Link>
           <Link href="/about">About</Link>
           <Link href="/#contact">Contact</Link>
         </nav>
 
         <div className="ds-footer-social">
-          <span>Elsewhere</span>
           <a href="https://github.com/dschunk" target="_blank" rel="noreferrer">GitHub ↗</a>
           <a href="https://www.linkedin.com/in/dschunk" target="_blank" rel="noreferrer">LinkedIn ↗</a>
           <a href="https://everydayittips.com" target="_blank" rel="noreferrer">Everyday IT Tips ↗</a>
@@ -55,7 +57,7 @@ export function SiteFooter() {
 
       <div className="ds-shell ds-footer-bottom">
         <span>© 2026 David Schunk</span>
-        <span>Built in New Hampshire.</span>
+        <span>New Hampshire, USA</span>
       </div>
     </footer>
   );
