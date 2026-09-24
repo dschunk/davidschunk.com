@@ -1,5 +1,5 @@
 davidschunk.com production deployment trigger
-2026-09-24T00:03:00-04:00
+2026-09-24T00:12:00-04:00
 source: main
-reason: deploy clean-slate bright editorial redesign across homepage and inner pages
-design-head: 90fdf88b473d4a075469b0bb71bf368444be6e52
+reason: deploy restrained monochrome redesign with native typography and simplified content-first layout
+design-head: b16f666a28bf3a40df1c62188ff83aad076d49a7
